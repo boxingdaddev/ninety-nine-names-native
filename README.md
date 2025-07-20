@@ -1,0 +1,1 @@
+This is my first mobile app project. It is the 99 names of Allah. FlipCard design. Recently uploaded a working version - replaced the 99names.Json with a dummy file to protect the contents for now as I plan to push it to the Playstore. Right now I am working on design details.
