@@ -51,7 +51,22 @@ export default function App() {
           const index = Math.round(event.nativeEvent.contentOffset.x / width);
           setCurrentIndex(index);
         }}
+        getItemLayout={(data, index) => ({
+          length: width,
+          offset: width * index,
+          index,
+        })}
+        onScrollToIndexFailed={(info) => {
+          console.warn('Scroll failed for index', info.index);
+          setTimeout(() => {
+            flatListRef.current.scrollToIndex({
+              index: info.index,
+              animated: true,
+            });
+          }, 300);
+        }}
       />
+
 
       <View style={styles.footer}>
         <Text style={styles.cardCount}>Card {currentIndex + 1} of {data.length}</Text>
