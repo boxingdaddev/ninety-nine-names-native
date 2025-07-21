@@ -1,10 +1,12 @@
 import React, { useRef } from 'react';
 import { View, Text, StyleSheet, Dimensions, TouchableWithoutFeedback } from 'react-native';
 import CardFlip from 'react-native-card-flip';
+import MoonBadge from './components/MoonBadge';
 
 const { width } = Dimensions.get('window');
 
 export default function FlipCard({
+  id,
   name,
   transliteration,
   title,
@@ -22,6 +24,7 @@ export default function FlipCard({
         <CardFlip style={styles.cardContainer} ref={cardRef}>
           {/* FRONT */}
           <View style={[styles.card, styles.front]}>
+            <MoonBadge number={id} />
             <Text style={styles.arabic}>{name}</Text>
             <Text style={styles.translit}>{transliteration}</Text>
             <Text style={styles.title}>{title}</Text>
@@ -30,7 +33,9 @@ export default function FlipCard({
           {/* BACK */}
           <View style={[styles.card, styles.back]}>
             <Text style={styles.description}>{description}</Text>
-            <Text style={styles.verse}>"{verse}"</Text>
+            <Text style={styles.verse}>
+              "{verse}"
+            </Text>
             <Text style={styles.reference}>{reference}</Text>
           </View>
         </CardFlip>
@@ -79,12 +84,12 @@ const styles = StyleSheet.create({
     color: '#D4AF37',
     fontWeight: 'bold',
     textAlign: 'center',
+    marginBottom: 8,
   },
   translit: {
     fontSize: 18,
     fontStyle: 'italic',
     color: '#555',
-    marginTop: 10,
   },
   title: {
     fontSize: 16,
