@@ -1,32 +1,48 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
-export default function DotIndicator({ total, currentIndex, maxVisible = 7 }) {
-  const half = Math.floor(maxVisible / 2);
-  let start = Math.max(0, currentIndex - half);
-  let end = Math.min(total, start + maxVisible);
+export default function DotIndicator({
+  total,
+  currentIndex,
+  maxVisible = 7,
+}) {
+  if (total <= 1) return null;
 
-  // If we're near the end, shift the window back
-  if (end - start < maxVisible) {
-    start = Math.max(0, end - maxVisible);
+  // If total is less than maxVisible, just show 1 dot per card
+  if (total <= maxVisible) {
+    return (
+      <View style={styles.container}>
+        {Array.from({ length: total }).map((_, i) => (
+          <View
+            key={i}
+            style={[
+              styles.dot,
+              i === currentIndex ? styles.activeDot : styles.inactiveDot,
+            ]}
+          />
+        ))}
+      </View>
+    );
   }
 
-  const indicators = Array.from({ length: end - start }, (_, i) => {
-    const index = start + i;
-    const isActive = index === currentIndex;
+  // For longer lists, chunk the dots based on range
+  const chunkSize = Math.ceil(total / maxVisible);
+  const dotCount = maxVisible;
+  const activeDotIndex = Math.floor(currentIndex / chunkSize);
 
-    return (
-      <View
-        key={index}
-        style={[
-          styles.dot,
-          isActive ? styles.activeDot : styles.inactiveDot,
-        ]}
-      />
-    );
-  });
-
-  return <View style={styles.container}>{indicators}</View>;
+  return (
+    <View style={styles.container}>
+      {Array.from({ length: dotCount }).map((_, i) => (
+        <View
+          key={i}
+          style={[
+            styles.dot,
+            i === activeDotIndex ? styles.activeDot : styles.inactiveDot,
+          ]}
+        />
+      ))}
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({

@@ -1,38 +1,99 @@
 import React, { useRef, useState } from 'react';
 import {
   View,
-  Text,
   StyleSheet,
   FlatList,
   Dimensions,
-  TextInput,
-  TouchableOpacity,
   KeyboardAvoidingView,
   Platform,
+  PanResponder,
 } from 'react-native';
 import FlipCard from './FlipCard';
-import DotIndicator from './components/DotIndicator'; // adjust path if different
-import data from './assets/99names.json'; // your local data file
+import DotIndicator from './components/DotIndicator';
+import data from './assets/99names.json';
 
-const { width, height } = Dimensions.get('window');
+const { width } = Dimensions.get('window');
 
 export default function App() {
   const flatListRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [inputIndex, setInputIndex] = useState('');
+  const [jumpingToIndex, setJumpingToIndex] = useState(false);
+  const [inputOverride, setInputOverride] = useState(null);
+  const [studyList, setStudyList] = useState([]); // ✅ Study bookmarks
+  const [loveList, setLoveList] = useState([]);
+  const [memorizedList, setMemorizedList] = useState([]);
+
 
   const scrollToIndex = (index) => {
     if (index >= 0 && index < data.length) {
+      setInputOverride(index + 1);
+      setJumpingToIndex(true);
       flatListRef.current.scrollToIndex({ index, animated: true });
       setCurrentIndex(index);
+      setTimeout(() => {
+        setJumpingToIndex(false);
+        setInputOverride(null);
+      }, 400);
     }
   };
 
-  const renderItem = ({ item }) => (
-    <View style={styles.cardWrapper}>
-      <FlipCard {...item} />
+  const panResponder = useRef(
+    PanResponder.create({
+      onMoveShouldSetPanResponder: (_, gestureState) => {
+        const verticalSwipe = Math.abs(gestureState.dy) > Math.abs(gestureState.dx);
+        return verticalSwipe && Math.abs(gestureState.dy) > 20;
+      },
+      onPanResponderRelease: (_, gestureState) => {
+        if (gestureState.dy > 50 || gestureState.dy < -50) {
+          const randomIndex = Math.floor(Math.random() * data.length);
+          scrollToIndex(randomIndex);
+        }
+      },
+    })
+  ).current;
+
+  const renderItem = ({ item, index }) => (
+    <View style={styles.cardWrapper} {...panResponder.panHandlers}>
+      <FlipCard
+        {...item}
+        currentIndex={currentIndex}
+        isActive={index === currentIndex}
+        onJumpToIndex={scrollToIndex}
+        inputOverride={inputOverride}
+
+        // ✅ STUDY
+        isStudied={studyList.includes(item.id)}
+        toggleStudyBookmark={() => {
+          setStudyList((prev) =>
+            prev.includes(item.id)
+              ? prev.filter((id) => id !== item.id)
+              : [...prev, item.id]
+          );
+        }}
+
+        // ✅ LOVE
+        isLoved={loveList.includes(item.id)}
+        toggleLoveBookmark={() => {
+          setLoveList((prev) =>
+            prev.includes(item.id)
+              ? prev.filter((id) => id !== item.id)
+              : [...prev, item.id]
+          );
+        }}
+
+        // ✅ MEMORIZED
+        isMemorized={memorizedList.includes(item.id)}
+        toggleMemorized={() => {
+          setMemorizedList((prev) =>
+            prev.includes(item.id)
+              ? prev.filter((id) => id !== item.id)
+              : [...prev, item.id]
+          );
+        }}
+      />
     </View>
   );
+
 
   return (
     <KeyboardAvoidingView
@@ -57,7 +118,6 @@ export default function App() {
           index,
         })}
         onScrollToIndexFailed={(info) => {
-          console.warn('Scroll failed for index', info.index);
           setTimeout(() => {
             flatListRef.current.scrollToIndex({
               index: info.index,
@@ -67,29 +127,12 @@ export default function App() {
         }}
       />
 
-
       <View style={styles.footer}>
-        <Text style={styles.cardCount}>Card {currentIndex + 1} of {data.length}</Text>
-
-        {/* DOT INDICATOR HERE */}
         <DotIndicator
           total={data.length}
           currentIndex={currentIndex}
           maxVisible={7}
         />
-
-        <View style={styles.inputRow}>
-          <TextInput
-            placeholder="Go to #"
-            keyboardType="number-pad"
-            value={inputIndex}
-            onChangeText={setInputIndex}
-            style={styles.input}
-          />
-          <TouchableOpacity onPress={() => scrollToIndex(Number(inputIndex) - 1)} style={styles.goButton}>
-            <Text style={styles.goText}>Go</Text>
-          </TouchableOpacity>
-        </View>
       </View>
     </KeyboardAvoidingView>
   );
@@ -112,35 +155,5 @@ const styles = StyleSheet.create({
     bottom: 30,
     alignSelf: 'center',
     alignItems: 'center',
-  },
-  cardCount: {
-    fontSize: 14,
-    color: '#333',
-    marginBottom: 10,
-  },
-  inputRow: {
-    flexDirection: 'row',
-    gap: 8,
-    alignItems: 'center',
-    marginTop: 12,
-  },
-  input: {
-    height: 40,
-    width: 100,
-    backgroundColor: '#fff',
-    borderRadius: 6,
-    paddingHorizontal: 10,
-    borderColor: '#ccc',
-    borderWidth: 1,
-  },
-  goButton: {
-    backgroundColor: '#D4AF37',
-    paddingHorizontal: 16,
-    paddingVertical: 10,
-    borderRadius: 6,
-  },
-  goText: {
-    color: '#fff',
-    fontWeight: 'bold',
   },
 });
