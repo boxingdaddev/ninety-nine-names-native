@@ -35,4 +35,6 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
-node_modules/
+
+# ignore old lockfile
+package-lock.json
