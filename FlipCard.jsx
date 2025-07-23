@@ -1,16 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   View,
   Text,
-  TextInput,
   StyleSheet,
   Dimensions,
   TouchableWithoutFeedback,
   TouchableOpacity,
 } from 'react-native';
 import CardFlip from 'react-native-card-flip';
+import { FontAwesome5 } from '@expo/vector-icons';
 import MoonBadge from './components/MoonBadge';
-import { FontAwesome5 } from '@expo/vector-icons'; // ✅ book icon
 
 const { width } = Dimensions.get('window');
 
@@ -23,29 +22,14 @@ export default function FlipCard({
   verse,
   reference,
   cardRef: passedRef,
-  currentIndex,
-  onJumpToIndex,
-  isActive,
-  inputOverride,
   isStudied,
   toggleStudyBookmark,
   isLoved,
   toggleLoveBookmark,
   isMemorized,
   toggleMemorized,
-
 }) {
-  const [editing, setEditing] = useState(false);
-  const [input, setInput] = useState('');
   const cardRef = passedRef || React.useRef();
-
-  const handleSubmit = () => {
-    const num = parseInt(input);
-    if (!isNaN(num) && num >= 1 && num <= 99) {
-      onJumpToIndex(num - 1);
-    }
-    setEditing(false);
-  };
 
   return (
     <TouchableWithoutFeedback onPress={() => cardRef.current?.flip()}>
@@ -53,46 +37,9 @@ export default function FlipCard({
         <CardFlip style={styles.cardContainer} ref={cardRef}>
           {/* FRONT */}
           <View style={[styles.card, styles.front]}>
-            <MoonBadge number={id} />
+            <MoonBadge />
 
-            <View style={styles.numberWrapper}>
-              {!editing ? (
-                <TouchableOpacity
-                  onPress={() => {
-                    setInput((inputOverride ?? id).toString());
-                    setEditing(true);
-                  }}
-                  hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
-                >
-                  <Text style={styles.cardNumber}>{inputOverride ?? id}</Text>
-                </TouchableOpacity>
-              ) : (
-                <TextInput
-                  value={input}
-                  onChangeText={setInput}
-                  autoFocus
-                  keyboardType="number-pad"
-                  onSubmitEditing={handleSubmit}
-                  onBlur={() => setEditing(false)}
-                  style={styles.cardNumberInput}
-                  cursorColor="#D4AF37"
-                />
-              )}
-            </View>
-
-            <Text style={styles.arabic}>{name}</Text>
-            <Text style={styles.translit}>{transliteration}</Text>
-            <Text style={styles.title}>{title}</Text>
-          </View>
-
-          {/* BACK */}
-          <View style={[styles.card, styles.back]}>
-            <Text style={styles.description}>{description}</Text>
-            <Text style={styles.verse}>"{verse}"</Text>
-            <Text style={styles.reference}>{reference}</Text>
-
-            {/* 📖 3 Icons */}
-            <View style={styles.iconRow}>
+            <View style={styles.iconRowFront}>
               <TouchableOpacity onPress={toggleLoveBookmark} hitSlop={10}>
                 <FontAwesome5
                   name="heart"
@@ -119,7 +66,43 @@ export default function FlipCard({
               </TouchableOpacity>
             </View>
 
+            <Text style={id === 98 ? styles.arabicLong : styles.arabic}>{name}</Text>
+            <Text style={styles.translit}>{transliteration}</Text>
+            <Text style={styles.title}>{title}</Text>
+          </View>
 
+          {/* BACK */}
+          <View style={[styles.card, styles.back]}>
+            <Text style={styles.description}>{description}</Text>
+            <Text style={styles.verse}>"{verse}"</Text>
+            <Text style={styles.reference}>{reference}</Text>
+
+            <View style={styles.iconRowBack}>
+              <TouchableOpacity onPress={toggleLoveBookmark} hitSlop={10}>
+                <FontAwesome5
+                  name="heart"
+                  size={22}
+                  solid
+                  color={isLoved ? '#D4AF37' : '#ccc'}
+                />
+              </TouchableOpacity>
+
+              <TouchableOpacity onPress={toggleStudyBookmark} hitSlop={10}>
+                <FontAwesome5
+                  name="book-open"
+                  size={22}
+                  color={isStudied ? '#D4AF37' : '#ccc'}
+                />
+              </TouchableOpacity>
+
+              <TouchableOpacity onPress={toggleMemorized} hitSlop={10}>
+                <FontAwesome5
+                  name="brain"
+                  size={22}
+                  color={isMemorized ? '#D4AF37' : '#ccc'}
+                />
+              </TouchableOpacity>
+            </View>
           </View>
         </CardFlip>
       </View>
@@ -163,33 +146,41 @@ const styles = StyleSheet.create({
     borderWidth: 2,
   },
   arabic: {
+    fontSize: 54,
+    color: '#D4AF37',
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: 4,
+  },
+  arabicLong: {
     fontSize: 42,
     color: '#D4AF37',
     fontWeight: 'bold',
     textAlign: 'center',
-    marginBottom: 8,
+    marginBottom: 4,
   },
   translit: {
     fontSize: 18,
     fontStyle: 'italic',
     color: '#555',
+    marginTop: 0, // ensure no extra gap
   },
   title: {
-    fontSize: 16,
+    fontSize: 18,
     color: '#222',
     fontWeight: '600',
     marginTop: 10,
     textAlign: 'center',
   },
   description: {
-    fontSize: 14,
+    fontSize: 16,
     fontStyle: 'italic',
     textAlign: 'center',
     marginBottom: 10,
     color: '#444',
   },
   verse: {
-    fontSize: 12,
+    fontSize: 14,
     textAlign: 'center',
     color: '#555',
   },
@@ -198,37 +189,20 @@ const styles = StyleSheet.create({
     textAlign: 'right',
     color: '#777',
     marginTop: 10,
+    fontWeight: '500',
   },
-  numberWrapper: {
+  iconRowFront: {
+    flexDirection: 'row',
+    gap: 18,
     position: 'absolute',
-    top: 12,
+    bottom: 12,
     left: 12,
-    width: 40,
-    height: 40,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
-  cardNumber: {
-    fontSize: 22,
-    color: '#D4AF37',
-    fontWeight: 'bold',
-  },
-  cardNumberInput: {
-    fontSize: 22,
-    fontWeight: 'bold',
-    color: '#D4AF37',
-    width: 40,
-    textAlign: 'center',
-    padding: 0,
-    margin: 0,
-    backgroundColor: 'transparent',
-  },
-  iconRow: {
+  iconRowBack: {
     flexDirection: 'row',
     gap: 18,
     position: 'absolute',
     bottom: 12,
     right: 12,
   },
-
 });
