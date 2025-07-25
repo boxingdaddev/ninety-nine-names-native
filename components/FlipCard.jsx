@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import {
   View,
   Text,
@@ -30,26 +30,86 @@ export default function FlipCard({
   isMemorized,
   toggleMemorized,
   counts,
-  onSummaryToggle,
+  activeCategory,
+  setActiveCategory,
 }) {
   const cardRef = passedRef || useRef();
-  const pulseAnim = useRef(new Animated.Value(1)).current;
 
-  const handleSummaryTap = () => {
+  // Tap pulse (quick feedback)
+  const tapPulseAnim = useRef(new Animated.Value(1)).current;
+
+  // Continuous subtle pulse for active icon
+  const subtlePulseAnim = useRef(new Animated.Value(1)).current;
+
+  useEffect(() => {
+    if (activeCategory) {
+      Animated.loop(
+        Animated.sequence([
+          Animated.timing(subtlePulseAnim, {
+            toValue: 0.85,
+            duration: 1500,
+            useNativeDriver: true,
+          }),
+          Animated.timing(subtlePulseAnim, {
+            toValue: 1,
+            duration: 1500,
+            useNativeDriver: true,
+          }),
+        ])
+      ).start();
+    } else {
+      subtlePulseAnim.stopAnimation(() => subtlePulseAnim.setValue(1));
+    }
+  }, [activeCategory]);
+
+  const handleCategoryToggle = (category) => {
     Animated.sequence([
-      Animated.timing(pulseAnim, {
+      Animated.timing(tapPulseAnim, {
         toValue: 1.2,
         duration: 120,
         useNativeDriver: true,
       }),
-      Animated.timing(pulseAnim, {
+      Animated.timing(tapPulseAnim, {
         toValue: 1,
         duration: 120,
         useNativeDriver: true,
       }),
     ]).start();
 
-    onSummaryToggle();
+    if (activeCategory === category) {
+      setActiveCategory(null);
+    } else {
+      setActiveCategory(category);
+    }
+  };
+
+  const isActive = (category) => activeCategory === category;
+
+  const renderBlueIcon = (category, iconName) => {
+    const isIconActive = isActive(category);
+
+    // Color logic: bright blue (default) vs dark blue (active)
+    let iconColor = '#2952CC'; // default bright blue
+    if (isIconActive) {
+      iconColor = '#1E3A8A'; // darker blue when active
+    }
+
+    return (
+      <TouchableOpacity
+        onPress={() => handleCategoryToggle(category)}
+        hitSlop={10}
+        style={isIconActive && styles.activeLift}
+      >
+        <Animated.View
+          style={{
+            opacity: isIconActive ? subtlePulseAnim : 1,
+            transform: [{ scale: isIconActive ? 1.2 : 1 }],
+          }}
+        >
+          <FontAwesome5 name={iconName} size={26} solid color={iconColor} />
+        </Animated.View>
+      </TouchableOpacity>
+    );
   };
 
   return (
@@ -60,6 +120,7 @@ export default function FlipCard({
           <View style={[styles.card, styles.front]}>
             <MoonBadge number={id} />
 
+            {/* Left gold/grey icons */}
             <View style={styles.iconRowFront}>
               <TouchableOpacity onPress={toggleLoveBookmark} hitSlop={10}>
                 <FontAwesome5
@@ -87,29 +148,12 @@ export default function FlipCard({
               </TouchableOpacity>
             </View>
 
-            {/* Blue summary icons */}
-            <Animated.View
-              style={[
-                styles.iconRowSummary,
-                { transform: [{ scale: pulseAnim }] },
-              ]}
-            >
-              {counts.loved > 0 && (
-                <TouchableOpacity onPress={handleSummaryTap} hitSlop={10}>
-                  <FontAwesome5 name="heart" size={22} solid color="#1E3A8A" />
-                </TouchableOpacity>
-              )}
-              {counts.studied > 0 && (
-                <TouchableOpacity onPress={handleSummaryTap} hitSlop={10}>
-                  <FontAwesome5 name="book-open" size={22} color="#1E3A8A" />
-                </TouchableOpacity>
-              )}
-              {counts.memorized > 0 && (
-                <TouchableOpacity onPress={handleSummaryTap} hitSlop={10}>
-                  <FontAwesome5 name="brain" size={22} color="#1E3A8A" />
-                </TouchableOpacity>
-              )}
-            </Animated.View>
+            {/* Right blue icons */}
+            <View style={styles.iconRowSummary}>
+              {counts.loved > 0 && renderBlueIcon('loved', 'heart')}
+              {counts.studied > 0 && renderBlueIcon('studied', 'book-open')}
+              {counts.memorized > 0 && renderBlueIcon('memorized', 'brain')}
+            </View>
 
             <Text style={id === 20 ? styles.arabicLong : styles.arabic}>{name}</Text>
             <Text style={styles.translit}>{transliteration}</Text>
@@ -122,6 +166,7 @@ export default function FlipCard({
             <Text style={styles.verse}>"{verse}"</Text>
             <Text style={styles.reference}>{reference}</Text>
 
+            {/* Left gold/grey icons */}
             <View style={styles.iconRowFront}>
               <TouchableOpacity onPress={toggleLoveBookmark} hitSlop={10}>
                 <FontAwesome5
@@ -149,29 +194,12 @@ export default function FlipCard({
               </TouchableOpacity>
             </View>
 
-            {/* Blue summary icons on back */}
-            <Animated.View
-              style={[
-                styles.iconRowSummary,
-                { transform: [{ scale: pulseAnim }] },
-              ]}
-            >
-              {counts.loved > 0 && (
-                <TouchableOpacity onPress={handleSummaryTap} hitSlop={10}>
-                  <FontAwesome5 name="heart" size={22} solid color="#1E3A8A" />
-                </TouchableOpacity>
-              )}
-              {counts.studied > 0 && (
-                <TouchableOpacity onPress={handleSummaryTap} hitSlop={10}>
-                  <FontAwesome5 name="book-open" size={22} color="#1E3A8A" />
-                </TouchableOpacity>
-              )}
-              {counts.memorized > 0 && (
-                <TouchableOpacity onPress={handleSummaryTap} hitSlop={10}>
-                  <FontAwesome5 name="brain" size={22} color="#1E3A8A" />
-                </TouchableOpacity>
-              )}
-            </Animated.View>
+            {/* Right blue icons */}
+            <View style={styles.iconRowSummary}>
+              {counts.loved > 0 && renderBlueIcon('loved', 'heart')}
+              {counts.studied > 0 && renderBlueIcon('studied', 'book-open')}
+              {counts.memorized > 0 && renderBlueIcon('memorized', 'brain')}
+            </View>
           </View>
         </CardFlip>
       </View>
@@ -273,5 +301,8 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 12,
     right: 12,
+  },
+  activeLift: {
+    transform: [{ translateY: -3 }],
   },
 });

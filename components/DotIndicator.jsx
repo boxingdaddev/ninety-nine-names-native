@@ -8,7 +8,7 @@ export default function DotIndicator({
 }) {
   if (total <= 1) return null;
 
-  // If total cards are less than maxVisible, one dot per card
+  // Show one dot per card if small total
   if (total <= maxVisible) {
     return (
       <View style={styles.container}>
@@ -25,8 +25,8 @@ export default function DotIndicator({
     );
   }
 
-  // For larger lists, map current progress proportionally to dots
-  const progress = currentIndex / (total - 1); // range 0 to 1
+  // Proportional dot logic
+  const progress = currentIndex / (total - 1);
   const activeDotIndex = Math.round(progress * (maxVisible - 1));
 
   return (
@@ -56,11 +56,11 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   activeDot: {
-    backgroundColor: '#D4AF37',
+    backgroundColor: '#D4AF37', // gold
     transform: [{ scale: 1.4 }],
   },
   inactiveDot: {
-    backgroundColor: '#e6d9aa',
+    backgroundColor: '#2952CC', // bright blue
     opacity: 0.5,
   },
 });

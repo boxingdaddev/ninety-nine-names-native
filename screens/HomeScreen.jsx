@@ -13,7 +13,7 @@ export default function HomeScreen({
   toggleMemorized
 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [showBookmarks, setShowBookmarks] = useState(false);
+  const [activeCategory, setActiveCategory] = useState(null); // Track active filter
   const flatListRef = useRef(null);
 
   const handleScroll = (event) => {
@@ -23,27 +23,23 @@ export default function HomeScreen({
     setCurrentIndex(index);
   };
 
-  const counts = {
-    loved: bookmarks.loved.length,
-    studied: bookmarks.studied.length,
-    memorized: bookmarks.memorized.length
-  };
-
-  const toggleView = () => {
-    setShowBookmarks(prev => !prev);
-    // Reset index when switching view
+  // Reset scroll position whenever category changes
+  const handleSetActiveCategory = (category) => {
+    // Always scroll to beginning of new dataset
+    flatListRef.current?.scrollToOffset({ offset: 0, animated: false });
     setCurrentIndex(0);
-    flatListRef.current?.scrollToIndex({ index: 0, animated: false });
+    setActiveCategory(category);
   };
 
-  // Choose data based on toggle
-  const displayedNames = showBookmarks
-    ? names.filter(item =>
-        bookmarks.loved.includes(item.id) ||
-        bookmarks.studied.includes(item.id) ||
-        bookmarks.memorized.includes(item.id)
-      )
-    : names;
+  // Filter cards based on activeCategory
+  const displayedNames =
+    activeCategory === 'loved'
+      ? names.filter((item) => bookmarks.loved.includes(item.id))
+      : activeCategory === 'studied'
+        ? names.filter((item) => bookmarks.studied.includes(item.id))
+        : activeCategory === 'memorized'
+          ? names.filter((item) => bookmarks.memorized.includes(item.id))
+          : names;
 
   return (
     <View style={{ flex: 1 }}>
@@ -62,6 +58,8 @@ export default function HomeScreen({
           offset: width * index,
           index,
         })}
+        // Key changes when category changes to avoid ghost frame
+        keyExtractor={(item) => `${activeCategory || 'all'}-${item.id}`}
         renderItem={({ item }) => (
           <View style={{ width, alignItems: 'center' }}>
             <FlipCard
@@ -72,12 +70,16 @@ export default function HomeScreen({
               toggleStudyBookmark={() => toggleStudy(item.id)}
               isMemorized={bookmarks.memorized.includes(item.id)}
               toggleMemorized={() => toggleMemorized(item.id)}
-              counts={counts}
-              onSummaryToggle={toggleView}
+              counts={{
+                loved: bookmarks.loved.length,
+                studied: bookmarks.studied.length,
+                memorized: bookmarks.memorized.length,
+              }}
+              activeCategory={activeCategory}
+              setActiveCategory={handleSetActiveCategory} // use wrapped setter
             />
           </View>
         )}
-        keyExtractor={(item) => item.id.toString()}
       />
 
       <View
