@@ -38,3 +38,10 @@ yarn-error.*
 
 # ignore old lockfile
 package-lock.json
+
+# IDE settings
+.vscode/
+.idea/
+
+# Logs
+*.log
