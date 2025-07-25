@@ -1,4 +1,5 @@
 # Ninety-Nine Names Native
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A React Native (Expo) app displaying the 99 Names of Allah with flip-card functionality, shuffle mode, and bookmarking (favorites, studying, memorized).
 
@@ -74,26 +75,6 @@ git push
 
 ---
 
-## Contributing
-
-1. Fork & clone
-2. Create a feature branch
-3. After changes:
-```bash
-npm shrinkwrap
-git add package.json npm-shrinkwrap.json
-git commit -m "Feature description"
-git push
-```
-4. Open Pull Request
-
----
-
-## Additional Documentation
-
-For deeper architecture and roadmap, see [ARCHITECTURE.md](ARCHITECTURE.md).
-
-
 # Temporarily move shrinkwrap
 mv npm-shrinkwrap.json npm-shrinkwrap.json.bak
 
@@ -105,3 +86,13 @@ npm shrinkwrap
 
 # Remove backup
 rm npm-shrinkwrap.json.bak
+
+## Additional Documentation
+
+For deeper architecture and roadmap, see [ARCHITECTURE.md](ARCHITECTURE.md).
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+Copyright (c) 2025 Adam Makhyoun
