@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import CardFlip from 'react-native-card-flip';
 import { FontAwesome5 } from '@expo/vector-icons';
-import MoonBadge from './components/MoonBadge';
+import MoonBadge from './MoonBadge';
 
 const { width } = Dimensions.get('window');
 
@@ -66,7 +66,7 @@ export default function FlipCard({
               </TouchableOpacity>
             </View>
 
-            <Text style={id === 98 ? styles.arabicLong : styles.arabic}>{name}</Text>
+            <Text style={id === 20 ? styles.arabicLong : styles.arabic}>{name}</Text>
             <Text style={styles.translit}>{transliteration}</Text>
             <Text style={styles.title}>{title}</Text>
           </View>
@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontStyle: 'italic',
     color: '#555',
-    marginTop: 0, // ensure no extra gap
+    marginTop: 0,
   },
   title: {
     fontSize: 18,

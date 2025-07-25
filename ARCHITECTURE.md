@@ -75,3 +75,9 @@ project-root/
 - Bookmark filters and dedicated bookmark screens
 - Persist bookmarks (AsyncStorage or cloud sync)
 - Dynamic font scaling for varying screen sizes
+---
+
+## Developer Quickstart
+
+install dependencies respecting the shrink wrap
+npm ci --legacy-peer-deps

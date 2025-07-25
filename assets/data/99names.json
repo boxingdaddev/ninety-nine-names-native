@@ -1,843 +1,6 @@
 [
   {
-    "id": 3,
-    "name": "ٱلْأَحَدُ",
-    "transliteration": "Al-Ahad",
-    "title": "The One",
-    "description": "He is the only unique one and incomparable to His creation (in attributes).",
-    "verse": "...There is nothing like Him...",
-    "reference": "Quran 42:11"
-  },
-  {
-    "id": 4,
-    "name": "ٱلْآخِرُ",
-    "transliteration": "Al-Akhir",
-    "title": "The Last",
-    "description": "His existence is without an end.",
-    "verse": "He is the First and the Last, the Ascendant and the Intimate, and He is, of all things, Knowing.",
-    "reference": "Quran 57:3"
-  },
-  {
-    "id": 5,
-    "name": "ٱلأوَّلُ",
-    "transliteration": "Al-Awwal",
-    "title": "The First",
-    "description": "His existence is without a beginning.",
-    "verse": "He is the First and the Last, the Ascendant and the Intimate, and He is, of all things, Knowing.",
-    "reference": "Quran 57:3"
-  },
-  {
-    "id": 6,
-    "name": "ٱلْبَاقِي",
-    "transliteration": "Al-Baaqee",
-    "title": "The Everlasting & The Eternal",
-    "description": "He will remain forever.",
-    "verse": "Everyone upon it [the earth] will perish, And there will remain the Face of your Lord, Owner of Majesty and Honor.",
-    "reference": "Quran 55:26-27"
-  },
-  {
-    "id": 7,
-    "name": "ٱلْبَارِئُ",
-    "transliteration": "Al-Baari`",
-    "title": "The Evolver",
-    "description": "He brings his creation into existence.",
-    "verse": "Then We made the sperm-drop into a clinging clot, and We made the clot into a lump [of flesh], and We made [from] the lump, bones, and We covered the bones with flesh. Then We developed him into another creation...",
-    "reference": "Quran 23:14"
-  },
-  {
-    "id": 8,
-    "name": "ٱلْبَاسِطُ",
-    "transliteration": "Al-Baasit",
-    "title": "The Extender",
-    "description": "He grants and extends sustenance.",
-    "verse": "Allah extends provision for whom He wills and restricts [it]. And they rejoice in the worldly life, while the worldly life is not, compared to the Hereafter, except [brief] enjoyment.",
-    "reference": "Quran 13:26"
-  },
-  {
-    "id": 9,
-    "name": "ٱلْبَاطِنُ",
-    "transliteration": "Al-Baatin",
-    "title": "The Knower of the Unseen & The Unseen One",
-    "description": "He is unseen and he is the creator of the unseen.",
-    "verse": "[He is] Knower of the unseen, and He does not disclose His [knowledge of the] unseen to anyone except whom He has approved of messengers...",
-    "reference": "Quran 72:26-27"
-  },
-  {
-    "id": 10,
-    "name": "ٱلْبَاعِثُ",
-    "transliteration": "Al-Baaʿith",
-    "title": "The Resurrector",
-    "description": "He awakens all mankind after death.",
-    "verse": "And[that they may know] that the Hour is coming - no doubt about it - and that Allah will resurrect those in the graves.",
-    "reference": "Quran 22:7"
-  },
-  {
-    "id": 11,
-    "name": "ٱلْبَدِيعُ",
-    "transliteration": "Al-Badeeʿ",
-    "title": "The Incomparable Originator",
-    "description": "He created and formed the universe without any mold or preceding example.",
-    "verse": "Originator of the heavens and the earth. When He decrees a matter, He only says it, ‘Be’, and it is.",
-    "reference": "Quran 2:117"
-  },
-  {
-    "id": 12,
-    "name": "ٱلْبَرُّ",
-    "transliteration": "Al-Barr",
-    "title": "The Source of All Goodness",
-    "description": "He wants the best for all mankind.",
-    "verse": "Allah intends for you ease and does not intend for you hardship and [wants] for you to complete the period and to glorify Allah for that [to] which He has guided you; and perhaps you will be grateful.",
-    "reference": "Quran 2:185"
-  },
-  {
-    "id": 13,
-    "name": "ٱلْبَصِيرُ",
-    "transliteration": "Al-Baseer",
-    "title": "The All-Seeing",
-    "description": "He sees everything, including anyone or anything hidden.",
-    "verse": "...Indeed, Allah is ever Hearing and Seeing.",
-    "reference": "Quran 4:58"
-  },
-  {
     "id": 1,
-    "name": "ٱلضَّارَ",
-    "transliteration": "Ad-Daarr",
-    "title": "The Distresser",
-    "description": "He can allow harm to reach whomever he wills.",
-    "verse": "And if Allah should touch you with adversity, there is no remover of it except Him. And if he touches you with good -  then He is over all things competent.",
-    "reference": "Quran 6:17"
-  },
-  {
-    "id": 2,
-    "name": "ٱلظَّاهِرُ",
-    "transliteration": "Adh-Dhaahir",
-    "title": "The Perceptible & The Manifest",
-    "description": "He made Himself evident and spread the truth without being visible.",
-    "verse": "It is He who has sent his Messenger with guidance and the religion of truth to manifest it over all religion, although they who associate others with Allah dislike it.",
-    "reference": "Quran 9:33"
-  },
-  {
-    "id": 98,
-    "name": "ذُوالْجَلَالِ وَالإكْرَامِ",
-    "transliteration": "Dhul-Jalaali Wal-Ikraam",
-    "title": "Lord of Majesty and Honor",
-    "description": "He is the possessor of all glory and honor.",
-    "verse": "Blessed is the name of your Lord, Owner of Majesty and Honor.",
-    "reference": "Quran 55:58"
-  },
-  {
-    "id": 14,
-    "name": "ٱلْفَتَّاحُ",
-    "transliteration": "Al-Fattaah",
-    "title": "The Opener & the Judge",
-    "description": "He opens all matters and judges accordingly.",
-    "verse": "Say, 'Our Lord will bring us together; then He will judge between us in truth. And He is the Knowing Judge'.",
-    "reference": "Quran 34:26"
-  },
-  {
-    "id": 15,
-    "name": "ٱلْغَفَّارُ",
-    "transliteration": "Al-Ghaffaar",
-    "title": "The Perpetual Forgiver",
-    "description": "He forgives any sin time and time again.",
-    "verse": "But indeed, I am the Perpetual Forgiver of whoever repents and believes and does righteousness and then continues in guidance.",
-    "reference": "Quran 20:82"
-  },
-  {
-    "id": 16,
-    "name": "ٱلْغَفُورُ",
-    "transliteration": "Al-Ghafoor",
-    "title": "The All-Forgiving",
-    "description": "He forgives everyone who repents. His forgiveness is unlimited.",
-    "verse": "Except for those who repent after that and correct themselves. For indeed Allah is Forgiving and Merciful.",
-    "reference": "Quran 3:89"
-  },
-  {
-    "id": 17,
-    "name": "ٱلْغَنيُّ",
-    "transliteration": "Al-Ghanee",
-    "title": "The Self-Sufficient One",
-    "description": "He is independent and free of need.",
-    "verse": "[Those] who are stingy and enjoin upon people stinginess. And whoever turns away - then indeed, Allah is the free of need, the Praiseworthy.",
-    "reference": "Quran 57:24"
-  },
-  {
-    "id": 18,
-    "name": "ٱلْهَادِي",
-    "transliteration": "Al-Haadee",
-    "title": "The Provider of Guidance",
-    "description": "He provides guidance to the believers.",
-    "verse": "And those who strive for Us - We will surely guide them to Our ways. And indeed, Allah is with the doers of good.",
-    "reference": "Quran 29:69"
-  },
-  {
-    "id": 19,
-    "name": "ٱلْحَفِيظُ",
-    "transliteration": "Al-Hafeedh",
-    "title": "The Guardian",
-    "description": "He protects whatever and whomever He wills.",
-    "verse": "And he [Iblees] had over them no authority except [it was decreed] that We might make evident who believes in the Hereafter from who was thereof in doubt. And your Lord, over all things, is Guardian.",
-    "reference": "Quran 34:21"
-  },
-  {
-    "id": 20,
-    "name": "ٱلْحَكَمُ",
-    "transliteration": "Al-Hakam",
-    "title": "The Judge",
-    "description": "He is the best of judges. He is fair in every situation.",
-    "verse": "Allah will judge between you on the Day of Resurrection concerning that over which you used to differ.",
-    "reference": "Quran 22:69"
-  },
-  {
-    "id": 21,
-    "name": "ٱلْحَكِيمُ",
-    "transliteration": "Al-Hakeem",
-    "title": "The All-Wise",
-    "description": "He is the most intelligent.",
-    "verse": "And if whatever trees upon the earth were pens and the sea [was ink], replenished thereafter by seven [more] seas, the words of Allah would not be exhausted. Indeed, Allah is Exalted in Might and Wise.",
-    "reference": "Quran 31:27"
-  },
-  {
-    "id": 22,
-    "name": "ٱلْحَلِيمُ",
-    "transliteration": "Al-Haleem",
-    "title": "The Most Forbearing",
-    "description": "He delays the punishment for those who deserve it as he may forgive them if they repent.",
-    "verse": "Indeed, Allah holds the heavens and the earth, lest they cease. And if they should cease, no one could hold them [in place] after him. Indeed, he is Forbearing and Forgiving.",
-    "reference": "Quran 35:41"
-  },
-  {
-    "id": 23,
-    "name": "ٱلْحَمِيدُ",
-    "transliteration": "Al-Hameed",
-    "title": "The Praiseworthy",
-    "description": "He is the only one worthy of worship.",
-    "verse": "To Allah belongs whatever is in the heavens and earth. Indeed, Allah is the Free of need, the Praiseworthy.",
-    "reference": "Quran 31:26"
-  },
-  {
-    "id": 24,
-    "name": "ٱلْحَقُ",
-    "transliteration": "Al-Haqq",
-    "title": "The Truth",
-    "description": "He is the only true God.",
-    "verse": "Then they [His servants] are returned to Allah, their true Lord. Unquestionably, His is the judgment, and He is the swiftest of accountants.",
-    "reference": "Quran 6:62"
-  },
-  {
-    "id": 25,
-    "name": "ٱلْحسِيبُ",
-    "transliteration": "Al-Haseeb",
-    "title": "The Reckoner",
-    "description": "He takes all actions into account on the Day of Judgment.",
-    "verse": "...they will say,'Oh, woe to us! What is this book that leaves nothing small or great except that it has enumerated it?' And they will find what they did present [before them]. And your Lord does injustice to no one.",
-    "reference": "Quran 18:49"
-  },
-  {
-    "id": 26,
-    "name": "ٱلْحَيُّ",
-    "transliteration": "Al-Hayy",
-    "title": "The Ever-Living",
-    "description": "He is the eternal.",
-    "verse": " Allah - There is no deity except Him, the Ever-Living, the Sustainer of [all] existence. Neither drowsiness overtakes Him nor sleep. To Him belongs whatever is in the heavens and whatever is on earth...",
-    "reference": "Quran 2:255"
-  },
-  {
-    "id": 27,
-    "name": "ٱلْجَامِعُ",
-    "transliteration": "Al-Jaamiʿ",
-    "title": "The Gatherer",
-    "description": "He has the power to assemble and arrange all that which has been dispersed.",
-    "verse": "Our Lord, surely you will gather the people for a day about which there is no doubt. Indeed, Allah does not fail in His promise.",
-    "reference": "Quran 3:9"
-  },
-  {
-    "id": 28,
-    "name": "ٱلْجَبَّارُ",
-    "transliteration": "Al-Jabbaar",
-    "title": "The Compeller & The Restorer",
-    "description": "Whatever he wills happens without fail.",
-    "verse": "His command is only when He intends a thing that He says to it, 'Be,' and it is.",
-    "reference": "Quran 36:82"
-  },
-  {
-    "id": 29,
-    "name": "ٱلْجَلِيلُ",
-    "transliteration": "Al-Jaleel",
-    "title": "The Majestic",
-    "description": "He is attributed with greatness of power and glory.",
-    "verse": "And there will remain the Face of your Lord, Owner of Majesty and Honor.",
-    "reference": "Quran 55:27"
-  },
-  {
-    "id": 30,
-    "name": "ٱلْكَبِيرُ",
-    "transliteration": "Al-Kabeer",
-    "title": "The Most Grand",
-    "description": "He is great in all aspects.",
-    "verse": "[He is} Knower of the unseen and the witnessed, the Grand, the Exalted.",
-    "reference": "Quran 13:9"
-  },
-  {
-    "id": 31,
-    "name": "ٱلْكَرِيمُ",
-    "transliteration": "Al-Kareem",
-    "title": "The Most Generous",
-    "description": "He is gracious and rewarding those who do good and are grateful.",
-    "verse": "And whoever is grateful - his gratitude is only for [the benefit] of himself. And whoever is ungrateful - then indeed, my Lord is free of need and Generous.",
-    "reference": "Quran 27:40"
-  },
-  {
-    "id": 32,
-    "name": "ٱلْخَافِضُ",
-    "transliteration": "Al-Khaafidh",
-    "title": "The Reducer",
-    "description": "He lowers the status of people as a means to make them humble.",
-    "verse": "We have certainly created man in the best of stature; Then We return him to the lowest of the low, Except for those who believe and do righteous deeds, for they will have a reward uninterrupted.",
-    "reference": "Quran 95:4-6"
-  },
-  {
-    "id": 33,
-    "name": "ٱلْخَالِقُ",
-    "transliteration": "Al-Khaaliq",
-    "title": "The Creator",
-    "description": "He creates everyone and everything from nothing.",
-    "verse": "He is Allah, the Creator, the Inventor, the Fashioner; to Him belong the best names. Whatever is in the heavens and earth is exalting Him. And He is the Exalted in Might, the Wise.",
-    "reference": "Quran 59:24"
-  },
-  {
-    "id": 34,
-    "name": "ٱلْخَبِيرُ",
-    "transliteration": "Al-Khabeer",
-    "title": "The All-Aware",
-    "description": "He is aware and knows the truth of every matter.",
-    "verse": "O you who have believed, fear Allah. And let every soul look to what it has put forth for tomorrow -  and fear Allah. Indeed, Allah is aware of what you do.",
-    "reference": "Quran 59:18"
-  },
-  {
-    "id": 35,
-    "name": "ٱلْلَّطِيفُ",
-    "transliteration": "Al-Lateef",
-    "title": "The Most Gentle & The Subtle One",
-    "description": "He is kind to his creation.",
-    "verse": "Do you not see that Allah has sent down rain from the sky and the earth becomes green? Indeed, Allah is Subtle and Acquainted.",
-    "reference": "Quran 22:63"
-  },
-  {
-    "id": 36,
-    "name": "ٱلْمَاجِدُ",
-    "transliteration": "Al-Maajid",
-    "title": "The Glorious",
-    "description": "He is the most high and noble.",
-    "verse": "And He is the Forgiving, the Affectionate, Glorious Owner of the Throne, Effecter of what He intends.",
-    "reference": "Quran 85:14-16"
-  },
-  {
-    "id": 99,
-    "name": "مَالِكُ ٱلْمُلْكِ",
-    "transliteration": "Maalik-ul-Mulk",
-    "title": "The Owner of the Dominion",
-    "description": "He is a sole owner of all creation and has full authority.",
-    "verse": "Do you not know that to Allah belongs the dominion of the heavens and the earth and [that] you have not besides Allah any protector or any helper?.",
-    "reference": "Quran 2:107"
-  },
-  {
-    "id": 37,
-    "name": "ٱلْمَانِعُ",
-    "transliteration": "Al-Maaniʿ",
-    "title": "The Withholder & The Preventer",
-    "description": "He withholds bounty from those undeserving.",
-    "verse": "Or who is it that could provide for you if He withheld his provision? But they have persisted in insolence and aversion.",
-    "reference": "Quran 67:21"
-  },
-  {
-    "id": 38,
-    "name": "ٱلْمَجِيدُ",
-    "transliteration": "Al-Majeed",
-    "title": "The Most Honorable",
-    "description": "He is the only one deserving of all praise and honor.",
-    "verse": "They said,'Are you amazed at the decree of Allah? May the mercy of Allah and His blessings be upon you, people of the house. Indeed, he is Praiseworthy and Honorable’.",
-    "reference": "Quran 11:73"
-  },
-  {
-    "id": 39,
-    "name": "ٱلْمَلِكُ",
-    "transliteration": "Al-Malik",
-    "title": "The King",
-    "description": "He is the ruler of the heavens and the earth.",
-    "verse": "He is Allah, other than whom there is no god, the Sovereign, the Pure, the Perfection, the Bestower of Faith, the Overseer, the Exalted in Might, the Compeller, the Superior...",
-    "reference": "Quran 59:23"
-  },
-  {
-    "id": 40,
-    "name": "ٱلْمَتِينُ",
-    "transliteration": "Al-Mateen",
-    "title": "The Steadfast & Firm",
-    "description": "He is firm in power and strength. Nothing disrupts or exhausts Him.",
-    "verse": "Indeed, it is Allah who is the Provider, The firm possessor of strength.",
-    "reference": "Quran 51:58"
-  },
-  {
-    "id": 59,
-    "name": "ٱلْمُؤَخِّرُ",
-    "transliteration": "Al-Mu'akh-khir",
-    "title": "The Delayer",
-    "description": "He delays and causes matters to occur later based on his wisdom.",
-    "verse": "Allah will forgive you of your sins and delay you for a specified term. Indeed, the time [set by] Allah, when it comes, will not be delayed, if you only knew.",
-    "reference": "Quran 71:4"
-  },
-  {
-    "id": 41,
-    "name": "ٱلْمُعِيدُ",
-    "transliteration": "Al-Mu'id",
-    "title": "The Restorer",
-    "description": "He restores and brings back all mankind after death.",
-    "verse": "He brings the living out of the dead and brings the dead out of the living and brings to life the earth after its lifelessness. And thus will you be brought out.",
-    "reference": "Quran 30:19"
-  },
-  {
-    "id": 42,
-    "name": "ٱلْمُؤْمِنُ",
-    "transliteration": "Al-Mu'min",
-    "title": "The Granter of Faith",
-    "description": "He grants faith and security.",
-    "verse": "So whoever does good and is a believer will never be denied [the reward for] their striving, for We are recording it all.",
-    "reference": "Quran 21:94"
-  },
-  {
-    "id": 43,
-    "name": "ٱلْمُبْدِئُ",
-    "transliteration": "Al-Mubdi",
-    "title": "The Originator",
-    "description": "He is the originator of all creation.",
-    "verse": "Have they not considered how Allah begins creation and then repeats it? Indeed that, for Allah, is easy.",
-    "reference": "Quran 29:19"
-  },
-  {
-    "id": 44,
-    "name": "ٱلْمُذِلُّ",
-    "transliteration": "Al-Mudhill",
-    "title": "The Dishonorer & The Humiliator",
-    "description": "He humbles and humiliates those who disbelieve or disobey Him.",
-    "verse": "...But upon many the punishment has been justified. And he whom Allah humiliates - for him there is no bestower of honor. Indeed, Allah does what He wills.",
-    "reference": "Quran 22:18"
-  },
-  {
-    "id": 45,
-    "name": "ٱلْمُغْنِيُّ",
-    "transliteration": "Al-Mughnee",
-    "title": "The Enricher & The Bestower of Sufficiency",
-    "description": "He gives abundantly and provides His creation with all that is needed.",
-    "verse": "And if you fear poverty, Allah will enrich you from His bounty if He wills. Indeed, Allah is Knowing and Wise.",
-    "reference": "Quran 9:28"
-  },
-  {
-    "id": 46,
-    "name": "ٱلْمُهَيْمِنُ",
-    "transliteration": "Al-Muhaymin",
-    "title": "The Overseer",
-    "description": "He is aware of all his creation and everything within it.",
-    "verse": "He knows what is in the heavens and earth; He knows what you conceal and what you reveal; God knows very well the secrets of every heart.",
-    "reference": "Quran 64:4"
-  },
-  {
-    "id": 47,
-    "name": "ٱلْمُحْصِي",
-    "transliteration": "Al-Muhsee",
-    "title": "The Counter",
-    "description": "Every deed is known by Allah and recorded by His angels.",
-    "verse": "And Indeed, [appointed] over you are keepers, Noble and recording; They know whatever you do.",
-    "reference": "Quran 82:10-12"
-  },
-  {
-    "id": 48,
-    "name": "ٱلْمُحْيِي",
-    "transliteration": "Al-Muhyee",
-    "title": "The Giver of Life",
-    "description": "He is the one who gives life and the one who takes it away.",
-    "verse": "And indeed, it is We who give life and cause death, and We are the Inheritor.",
-    "reference": "Quran 15:23"
-  },
-  {
-    "id": 49,
-    "name": "ٱلْمُجِيبُ",
-    "transliteration": "Al-Mujeeb",
-    "title": "The Responding One",
-    "description": "He answers and rescues the one in need if he calls upon Him.",
-    "verse": "Is He [not best] who responds to the desperate one when he calls upon Him and removes evil and makes you inheritors of the earth? ...",
-    "reference": "Quran 27:62"
-  },
-  {
-    "id": 50,
-    "name": "ٱلْمُمِيتُ",
-    "transliteration": "Al-Mumeet",
-    "title": "The Bringer of Death",
-    "description": "He causes death at an appointed time with no escape.",
-    "verse": "Wherever you may be, death will overtake you, even if you should be within towers of lofty construction.",
-    "reference": "Quran 4:78"
-  },
-  {
-    "id": 51,
-    "name": "ٱلْمُنْتَقِمُ",
-    "transliteration": "Al-Muntaqim",
-    "title": "The Avenger & The Inflictor of Retribution",
-    "description": "He punishes the sinners in order to discipline them.",
-    "verse": "And who is more unjust than one who is reminded of the verses of his Lord; then he turns away from them? Indeed We, from the criminals, will take retribution.",
-    "reference": "Quran 32:22"
-  },
-  {
-    "id": 52,
-    "name": "ٱلْمُقَدِّمُ",
-    "transliteration": "Al-Muqaddim",
-    "title": "The Expediter",
-    "description": "He expedites and causes matters to occur sooner based on His wisdom.",
-    "verse": "...And when their term has come, they will not remain behind an hour, nor will they proceed[it].",
-    "reference": "Quran 16:61"
-  },
-  {
-    "id": 53,
-    "name": "ٱلْمُقِيتُ",
-    "transliteration": "Al-Muqeet",
-    "title": "The Maintainer & Sustainer",
-    "description": "He gives strength and nourishment to all creation and maintains all that exists.",
-    "verse": "And there is no creature on earth but that upon Allah is its provision, and He knows its place of dwelling and place of storage. All is in a clear register.",
-    "reference": "Quran 11:6"
-  },
-  {
-    "id": 54,
-    "name": "ٱلْمُقْسِطُ",
-    "transliteration": "Al-Muqsit",
-    "title": "The Most Fair",
-    "description": "He is just in every matter.",
-    "verse": "Allah witnesses that there is no deity except Him, and so do the angels and those of knowledge - [that He is] maintaining [creation] in justice. There is no deity except Him, the Exalted in Might, the Wise.",
-    "reference": "Quran 3:18"
-  },
-  {
-    "id": 55,
-    "name": "ٱلْمُقْتَدِرُ",
-    "transliteration": "Al-Muqtadir",
-    "title": "The Dominant & The Powerful",
-    "description": "He has total strength, power, and mastery.",
-    "verse": "They denied Our signs, all of them, so We seized them with a seizure of one Exalted in Might and Perfect Ability.",
-    "reference": "Quran 54:42"
-  },
-  {
-    "id": 56,
-    "name": "ٱلْمُصَوِّرُ",
-    "transliteration": "Al-Musawwir",
-    "title": " The Sculptor",
-    "description": "He shapes his creation in different forms.",
-    "verse": "He made for you hearing and vision and hearts [intellect] that perhaps you would be grateful.",
-    "reference": "Quran 16:78"
-  },
-  {
-    "id": 57,
-    "name": "ٱلْمُتَكَبِّرُ",
-    "transliteration": "Al-Mutakabbir",
-    "title": "The Dominant One & The Supreme",
-    "description": "He is clear from the attributes of mankind.",
-    "verse": "He is Allah...The Superior. Exalted is Allah above whatever they associate with Him.",
-    "reference": "Quran 59:23"
-  },
-  {
-    "id": 58,
-    "name": "ٱلْمُتَعَالِي",
-    "transliteration": "Al-Mutaʿali",
-    "title": "The Most Exalted",
-    "description": "He is the most high and the most exalted above all creation.",
-    "verse": "[He is] Knower of the unseen and the seen, the Grand, the Exalted.",
-    "reference": "Quran 13:9"
-  },
-  {
-    "id": 60,
-    "name": "ٱلْمُعِزُّ",
-    "transliteration": "Al-Muʿizz",
-    "title": "The Honorer-Bestower",
-    "description": "He strengthens, honors, and glorifies His servants.",
-    "verse": "Say,'O Allah...You honor whom You will and You humble whom You will. In Your hands is [all] good. Indeed, You are over all things competent'.",
-    "reference": "Quran 3:26"
-  },
-  {
-    "id": 82,
-    "name": "ٱلنَّافِعُ",
-    "transliteration": "An-Naafiʿ",
-    "title": "The Bestower of Good",
-    "description": "He can allow benefit to reach whomever He wills.",
-    "verse": "Do they not see that Allah extends provision for which He wills and restricts [it]? Indeed, in that are signs for people who believe.",
-    "reference": "Quran 30:37"
-  },
-  {
-    "id": 83,
-    "name": "ٱلنُّورُ",
-    "transliteration": "An-Noor",
-    "title": "The Light",
-    "description": "His light provides clarity and guidance.",
-    "verse": "Allah is the Light of the heavens and the earth... Allah guides to His light whom He wills. And Allah presents examples for the people, and Allah is Knowing of all things.",
-    "reference": "Quran 24:35"
-  },
-  {
-    "id": 61,
-    "name": "ٱلْقَابِضُ",
-    "transliteration": "Al-Qaabid",
-    "title": "The Restricting One & The Withholder",
-    "description": "He withholds abundance. He is the one who enriches and makes poor.",
-    "verse": "...And it is Allah who withholds and grants abundance, and to Him you will be returned.",
-    "reference": "Quran 2:245"
-  },
-  {
-    "id": 62,
-    "name": "ٱلْقَادِرُ",
-    "transliteration": "Al-Qaadir",
-    "title": "The Capable",
-    "description": "Whenever He decrees a thing, it is. Nothing can interrupt the will of Allah.",
-    "verse": "Do they not see that Allah who created the heavens and earth and did not fail in their creation, is able to give life to the dead? Yes. Indeed, He is over all things competent.",
-    "reference": "Quran 46:33"
-  },
-  {
-    "id": 63,
-    "name": "ٱلْقَهَّارُ",
-    "transliteration": "Al-Qahhaar",
-    "title": "The All-Prevailing One",
-    "description": "He has power over everything.",
-    "verse": "The Day they come forth nothing concerning them will be concealed from Allah. To whom belongs [all] sovereignty this Day? To Allah, the One, the Prevailing.",
-    "reference": "Quran 40:16"
-  },
-  {
-    "id": 64,
-    "name": "ٱلْقَوِيُ",
-    "transliteration": "Al-Qawee",
-    "title": "The Most Strong",
-    "description": "He is the only one with complete power and strength.",
-    "verse": "...And Allah will surely support those who support Him [His cause]. Indeed, Allah is Powerful and Exalted in Might.",
-    "reference": "Quran 22:40"
-  },
-  {
-    "id": 65,
-    "name": "ٱلْقَيُّومُ",
-    "transliteration": "Al-Qayyoom",
-    "title": "The Sustainer",
-    "description": "He is a self-existing one upon Whom all others depend.",
-    "verse": "Allah - there is no deity except Him, the Ever-Living, the Sustainer of existence.",
-    "reference": "Quran 3:2"
-  },
-  {
-    "id": 66,
-    "name": "ٱلْقُدُّوسُ",
-    "transliteration": "Al-Quddoos",
-    "title": "The Most Sacred & The Pure",
-    "description": "He is pure from any imperfection.",
-    "verse": "Whatever is in the heavens and whatever is on the earth is exalting Allah, The Sovereign, the Pure, the Exalted in Might, the Wise.",
-    "reference": "Quran 62:1"
-  },
-  {
-    "id": 84,
-    "name": "ٱلرَّؤُوفُ",
-    "transliteration": "Ar-Ra'oof",
-    "title": "The Most Kind",
-    "description": "He is extremely compassionate.",
-    "verse": "It is He who sends down... clear evidence that He may bring you out from darkness into the light. And indeed, Allah is to you Kind and Merciful.",
-    "reference": "Quran 57:9"
-  },
-  {
-    "id": 85,
-    "name": "ٱلرَّافِعُ",
-    "transliteration": "Ar-Raafiʿ",
-    "title": "The Elevating One & The Exalter",
-    "description": "He chooses who will be raised in rank and status.",
-    "verse": "...Allah will raise those who have believed among you and those who were given knowledge, by degrees. And Allah is Aware of what you do.",
-    "reference": "Quran 58:11"
-  },
-  {
-    "id": 86,
-    "name": "ٱلرَّحِيمُ",
-    "transliteration": "Ar-Rahim",
-    "title": "The Especially Merciful",
-    "description": "He shows extra mercy to the believers.",
-    "verse": "...And ever is He, to the believers, Merciful.",
-    "reference": "Quran 33:43"
-  },
-  {
-    "id": 87,
-    "name": "ٱلرَّحْمَـانُ",
-    "transliteration": "Ar-Rahman",
-    "title": "The Entirely Merciful",
-    "description": "He shows mercy to all creation.",
-    "verse": "Call upon Allah or call upon the Most Merciful [Ar-Rahman]. Whichever name you call - to Him belong the best names...",
-    "reference": "Quran 17:110"
-  },
-  {
-    "id": 88,
-    "name": "ٱلرَّقِيبُ",
-    "transliteration": "Ar-Raqeeb",
-    "title": "The Watchful",
-    "description": "He is observant of His creation. There is nothing absent or hidden from Him.",
-    "verse": "...He knows what penetrates the earth and what emerges from it and what descends from the heaven and what ascends therein; and He is with you wherever you are. And Allah, of what you do, is Seeing.",
-    "reference": "Quran 57:4"
-  },
-  {
-    "id": 89,
-    "name": "ٱلرَّشِيدُ",
-    "transliteration": "Ar-Rasheed",
-    "title": "The One Who Guides",
-    "description": "He is a supreme director to the right path and right belief.",
-    "verse": "...So whoever disbelieves in idols and believes in Allah has grasped the most trustworthy handhold with no break in it. And Allah is Hearing and Knowing.",
-    "reference": "Quran 2:256"
-  },
-  {
-    "id": 90,
-    "name": "ٱلرَّزَّاقُ",
-    "transliteration": "Ar-Razzaaq",
-    "title": "The Provider",
-    "description": "He provides sustenance for all His creations.",
-    "verse": "...Is there any creator other than Allah who provides for you from the heaven and earth? There is no god except Him, so how are you deluded?.",
-    "reference": "Quran 35:3"
-  },
-  {
-    "id": 91,
-    "name": "ٱلصَّبُورُ",
-    "transliteration": "As-Saboor",
-    "title": "The Patient",
-    "description": "He delays and does not quickly punish the sinners.",
-    "verse": "And be patient, [O Muhammad], and your patience is not but through Allah. And do not grieve over them and do not be in distress over what they conspire.",
-    "reference": "Quran 16:127"
-  },
-  {
-    "id": 92,
-    "name": "ٱلسَّلَامُ",
-    "transliteration": "As-Salam",
-    "title": "The Giver of Peace.",
-    "description": "He grants peace and security.",
-    "verse": "And Allah invites to the home of Peace[Paradise] and guides whom he wills to a straight path.",
-    "reference": "Quran 10:25"
-  },
-  {
-    "id": 93,
-    "name": "ٱلصَّمَدُ",
-    "transliteration": "As-Samad",
-    "title": "The Supreme Provider",
-    "description": "He is the primary provider, and He is relied upon by all.",
-    "verse": "Allah, the Eternal Refuge.",
-    "reference": "Quran 112:2"
-  },
-  {
-    "id": 94,
-    "name": "ٱلسَّمِيعُ",
-    "transliteration": "As-Sameeʿ",
-    "title": "The All-Hearing",
-    "description": "He hears everything, including thoughts and heart murmurs.",
-    "verse": "...And Allah is Hearing and Knowing.",
-    "reference": "Quran 2:256"
-  },
-  {
-    "id": 95,
-    "name": "ٱلشَّهِيدُ",
-    "transliteration": "Ash-Shaheed",
-    "title": "The Witness",
-    "description": "He is always present and observant of everything and everyone.",
-    "verse": "But Allah bears witness to that which He has revealed to you. He has sent it down with His knowledge, and the angels bear witness [as well]. And sufficient is Allah as Witness.",
-    "reference": "Quran 4:166"
-  },
-  {
-    "id": 96,
-    "name": "ٱلشَّكُورُ",
-    "transliteration": "Ash-Shakoor",
-    "title": "The Most Appreciative",
-    "description": "He appreciates and rewards those who do good.",
-    "verse": "If you loan Allah a goodly loan, He will multiply it for you and forgive you. And Allah is Most Appreciative and Forbearing.",
-    "reference": "Quran 64:17"
-  },
-  {
-    "id": 97,
-    "name": "ٱلتَّوَابُ",
-    "transliteration": "At-Tawwaab",
-    "title": "The Acceptor of Repentance",
-    "description": "He forgives those who repent.",
-    "verse": "Then exalt [Him] with praise of your Lord and ask forgiveness of Him. Indeed, He is ever accepting of repentance.",
-    "reference": "Quran 110:3"
-  },
-  {
-    "id": 67,
-    "name": "ٱلْواحِدُ",
-    "transliteration": "Al-Waahid",
-    "title": "The Only One",
-    "description": "He is the only one God (in number).",
-    "verse": "And your god is one God. There is no deity [worthy of worship] except Him, the Entirely Merciful, the Especially Merciful.",
-    "reference": "Quran 2:163"
-  },
-  {
-    "id": 68,
-    "name": "ٱلْوَاجِدُ",
-    "transliteration": "Al-Waajid",
-    "title": "The Perceiver & The Finder",
-    "description": "He is rich, independent, and resourceful. He attains whatever He wills.",
-    "verse": "And He found you poor and made [you] self-sufficient.",
-    "reference": "Quran 93:8"
-  },
-  {
-    "id": 69,
-    "name": "ٱلْوَالِي",
-    "transliteration": "Al-Waalee",
-    "title": "The Patron",
-    "description": "He has authority and manages everyone's condition.",
-    "verse": "Indeed, Allah will not change the condition of a people until they change what is in themselves. And when Allah intends for a people ill, there is no repelling it. And there is not for them besides Him any patron.",
-    "reference": "Quran 13:11"
-  },
-  {
-    "id": 70,
-    "name": "ٱلْوَارِثُ",
-    "transliteration": "Al-Waarith",
-    "title": "The Inheritor",
-    "description": "All possessions [souls] will be returned to him.",
-    "verse": "And indeed, it is We who give life and cause death, and We are the Inheritor.",
-    "reference": "Quran 15:23"
-  },
-  {
-    "id": 71,
-    "name": "ٱلْوَاسِعُ",
-    "transliteration": "Al-Waasiʿ",
-    "title": "The All-Encompassing",
-    "description": "His knowledge, mercy, and bounty are vast and limitless.",
-    "verse": "Say,'Indeed,[all] bounty is in the hand of Allah - He grants it to whom He wills. And Allah is all-Encompassing and Wise.'",
-    "reference": "Quran 3:73"
-  },
-  {
-    "id": 72,
-    "name": "ٱلْوَدُودُ",
-    "transliteration": "Al-Wadood",
-    "title": "The Most Loving",
-    "description": "He is the source of all love and kindness.",
-    "verse": "...Indeed, Allah loves those who are constantly repentant and loves those who purify themselves.\n...Allah loves those who are patient.\n...Allah loves those who rely [upon Him].\n...Allah loves those who are just.",
-    "reference": "Quran 2:222, 3:146, 3:159, 5:42"
-  },
-  {
-    "id": 73,
-    "name": "ٱلْوَهَّابُ",
-    "transliteration": "Al-Wahhaab",
-    "title": "The Supreme Bestower",
-    "description": "He gives generously and expects nothing in return.",
-    "verse": "He said ,'My Lord, forgive me and grant me a kingdom such as will not belong to anyone after me. Indeed, You are the Bestower'.",
-    "reference": "Quran 38:35"
-  },
-  {
-    "id": 74,
-    "name": "ٱلْوَكِيلُ",
-    "transliteration": "Al-Wakeel",
-    "title": "The Disposer of Affairs & The Trustee",
-    "description": "He is the only one who can be trusted with all affairs.",
-    "verse": "[He is] the Lord of the East and the West; there is no deity except Him, so take Him as Disposer of [your] affairs.",
-    "reference": "Quran 73:9"
-  },
-  {
-    "id": 75,
-    "name": "ٱلْوَلِيُّ",
-    "transliteration": "Al-Walee",
-    "title": "The Protector",
-    "description": "He protects, guards, and supports the believers.",
-    "verse": "Indeed, my protector is Allah, who has sent down the Book; and He is an ally to the righteous.",
-    "reference": "Quran 7:196"
-  },
-  {
-    "id": 76,
     "name": "ٱلْعَظِيمُ",
     "transliteration": "Al-ʿAdheem",
     "title": "The Magnificent & The Greatest",
@@ -846,7 +9,7 @@
     "reference": "Quran 42:4"
   },
   {
-    "id": 77,
+    "id": 2,
     "name": "ٱلْعَدْلُ",
     "transliteration": "Al-ʿAdl",
     "title": "The Just",
@@ -855,7 +18,7 @@
     "reference": "Quran 4:40"
   },
   {
-    "id": 78,
+    "id": 3,
     "name": "ٱلْعَفُوُ",
     "transliteration": "Al-ʿAfoo",
     "title": "The Supreme Pardoner",
@@ -864,7 +27,25 @@
     "reference": "Quran 22:60"
   },
   {
-    "id": 79,
+    "id": 4,
+    "name": "ٱلْأَحَدُ",
+    "transliteration": "Al-Ahad",
+    "title": "The One",
+    "description": "He is the only unique one and incomparable to His creation (in attributes).",
+    "verse": "...There is nothing like Him...",
+    "reference": "Quran 42:11"
+  },
+  {
+    "id": 5,
+    "name": "ٱلْآخِرُ",
+    "transliteration": "Al-Akhir",
+    "title": "The Last",
+    "description": "His existence is without an end.",
+    "verse": "He is the First and the Last, the Ascendant and the Intimate, and He is, of all things, Knowing.",
+    "reference": "Quran 57:3"
+  },
+  {
+    "id": 6,
     "name": "ٱلْعَلِيُّ",
     "transliteration": "Al-ʿAlee",
     "title": "The Most High & The Exalted",
@@ -873,7 +54,7 @@
     "reference": "Quran 31:30"
   },
   {
-    "id": 80,
+    "id": 7,
     "name": "ٱلْعَلِيمُ",
     "transliteration": "Al-ʿAleem",
     "title": "The All-Knowing One",
@@ -882,12 +63,831 @@
     "reference": "Quran 6:59"
   },
   {
-    "id": 81,
+    "id": 8,
+    "name": "ٱلأوَّلُ",
+    "transliteration": "Al-Awwal",
+    "title": "The First",
+    "description": "His existence is without a beginning.",
+    "verse": "He is the First and the Last, the Ascendant and the Intimate, and He is, of all things, Knowing.",
+    "reference": "Quran 57:3"
+  },
+  {
+    "id": 9,
     "name": "ٱلْعَزِيزُ",
     "transliteration": "Al-ʿAzeez",
     "title": "The Almighty",
     "description": "He has power over all his creation.",
     "verse": "And to Allah belong the soldiers of the heavens and the earth. And ever is Allah Exalted in Might and Wise.",
     "reference": "Quran 48:7"
+  },
+  {
+    "id": 10,
+    "name": "ٱلْبَاقِي",
+    "transliteration": "Al-Baaqee",
+    "title": "The Everlasting & The Eternal",
+    "description": "He will remain forever.",
+    "verse": "Everyone upon it [the earth] will perish, And there will remain the Face of your Lord, Owner of Majesty and Honor.",
+    "reference": "Quran 55:26-27"
+  },
+  {
+    "id": 11,
+    "name": "ٱلْبَارِئُ",
+    "transliteration": "Al-Baari`",
+    "title": "The Evolver",
+    "description": "He brings his creation into existence.",
+    "verse": "Then We made the sperm-drop into a clinging clot, and We made the clot into a lump [of flesh], and We made [from] the lump, bones, and We covered the bones with flesh. Then We developed him into another creation...",
+    "reference": "Quran 23:14"
+  },
+  {
+    "id": 12,
+    "name": "ٱلْبَاسِطُ",
+    "transliteration": "Al-Baasit",
+    "title": "The Extender",
+    "description": "He grants and extends sustenance.",
+    "verse": "Allah extends provision for whom He wills and restricts [it]. And they rejoice in the worldly life, while the worldly life is not, compared to the Hereafter, except [brief] enjoyment.",
+    "reference": "Quran 13:26"
+  },
+  {
+    "id": 13,
+    "name": "ٱلْبَاطِنُ",
+    "transliteration": "Al-Baatin",
+    "title": "The Knower of the Unseen & The Unseen One",
+    "description": "He is unseen and he is the creator of the unseen.",
+    "verse": "[He is] Knower of the unseen, and He does not disclose His [knowledge of the] unseen to anyone except whom He has approved of messengers...",
+    "reference": "Quran 72:26-27"
+  },
+  {
+    "id": 14,
+    "name": "ٱلْبَاعِثُ",
+    "transliteration": "Al-Baaʿith",
+    "title": "The Resurrector",
+    "description": "He awakens all mankind after death.",
+    "verse": "And[that they may know] that the Hour is coming - no doubt about it - and that Allah will resurrect those in the graves.",
+    "reference": "Quran 22:7"
+  },
+  {
+    "id": 15,
+    "name": "ٱلْبَدِيعُ",
+    "transliteration": "Al-Badeeʿ",
+    "title": "The Incomparable Originator",
+    "description": "He created and formed the universe without any mold or preceding example.",
+    "verse": "Originator of the heavens and the earth. When He decrees a matter, He only says it, ‘Be’, and it is.",
+    "reference": "Quran 2:117"
+  },
+  {
+    "id": 16,
+    "name": "ٱلْبَرُّ",
+    "transliteration": "Al-Barr",
+    "title": "The Source of All Goodness",
+    "description": "He wants the best for all mankind.",
+    "verse": "Allah intends for you ease and does not intend for you hardship and [wants] for you to complete the period and to glorify Allah for that [to] which He has guided you; and perhaps you will be grateful.",
+    "reference": "Quran 2:185"
+  },
+  {
+    "id": 17,
+    "name": "ٱلْبَصِيرُ",
+    "transliteration": "Al-Baseer",
+    "title": "The All-Seeing",
+    "description": "He sees everything, including anyone or anything hidden.",
+    "verse": "...Indeed, Allah is ever Hearing and Seeing.",
+    "reference": "Quran 4:58"
+  },
+  {
+    "id": 18,
+    "name": "ٱلضَّارَ",
+    "transliteration": "Ad-Daarr",
+    "title": "The Distresser",
+    "description": "He can allow harm to reach whomever he wills.",
+    "verse": "And if Allah should touch you with adversity, there is no remover of it except Him. And if he touches you with good -  then He is over all things competent.",
+    "reference": "Quran 6:17"
+  },
+  {
+    "id": 19,
+    "name": "ٱلظَّاهِرُ",
+    "transliteration": "Adh-Dhaahir",
+    "title": "The Perceptible & The Manifest",
+    "description": "He made Himself evident and spread the truth without being visible.",
+    "verse": "It is He who has sent his Messenger with guidance and the religion of truth to manifest it over all religion, although they who associate others with Allah dislike it.",
+    "reference": "Quran 9:33"
+  },
+  {
+    "id": 20,
+    "name": "ذُوالْجَلَالِ وَالإكْرَامِ",
+    "transliteration": "Dhul-Jalaali Wal-Ikraam",
+    "title": "Lord of Majesty and Honor",
+    "description": "He is the possessor of all glory and honor.",
+    "verse": "Blessed is the name of your Lord, Owner of Majesty and Honor.",
+    "reference": "Quran 55:58"
+  },
+  {
+    "id": 21,
+    "name": "ٱلْفَتَّاحُ",
+    "transliteration": "Al-Fattaah",
+    "title": "The Opener & the Judge",
+    "description": "He opens all matters and judges accordingly.",
+    "verse": "Say, 'Our Lord will bring us together; then He will judge between us in truth. And He is the Knowing Judge'.",
+    "reference": "Quran 34:26"
+  },
+  {
+    "id": 22,
+    "name": "ٱلْغَفَّارُ",
+    "transliteration": "Al-Ghaffaar",
+    "title": "The Perpetual Forgiver",
+    "description": "He forgives any sin time and time again.",
+    "verse": "But indeed, I am the Perpetual Forgiver of whoever repents and believes and does righteousness and then continues in guidance.",
+    "reference": "Quran 20:82"
+  },
+  {
+    "id": 23,
+    "name": "ٱلْغَفُورُ",
+    "transliteration": "Al-Ghafoor",
+    "title": "The All-Forgiving",
+    "description": "He forgives everyone who repents. His forgiveness is unlimited.",
+    "verse": "Except for those who repent after that and correct themselves. For indeed Allah is Forgiving and Merciful.",
+    "reference": "Quran 3:89"
+  },
+  {
+    "id": 24,
+    "name": "ٱلْغَنيُّ",
+    "transliteration": "Al-Ghanee",
+    "title": "The Self-Sufficient One",
+    "description": "He is independent and free of need.",
+    "verse": "[Those] who are stingy and enjoin upon people stinginess. And whoever turns away - then indeed, Allah is the free of need, the Praiseworthy.",
+    "reference": "Quran 57:24"
+  },
+  {
+    "id": 25,
+    "name": "ٱلْهَادِي",
+    "transliteration": "Al-Haadee",
+    "title": "The Provider of Guidance",
+    "description": "He provides guidance to the believers.",
+    "verse": "And those who strive for Us - We will surely guide them to Our ways. And indeed, Allah is with the doers of good.",
+    "reference": "Quran 29:69"
+  },
+  {
+    "id": 26,
+    "name": "ٱلْحَفِيظُ",
+    "transliteration": "Al-Hafeedh",
+    "title": "The Guardian",
+    "description": "He protects whatever and whomever He wills.",
+    "verse": "And he [Iblees] had over them no authority except [it was decreed] that We might make evident who believes in the Hereafter from who was thereof in doubt. And your Lord, over all things, is Guardian.",
+    "reference": "Quran 34:21"
+  },
+  {
+    "id": 27,
+    "name": "ٱلْحَكَمُ",
+    "transliteration": "Al-Hakam",
+    "title": "The Judge",
+    "description": "He is the best of judges. He is fair in every situation.",
+    "verse": "Allah will judge between you on the Day of Resurrection concerning that over which you used to differ.",
+    "reference": "Quran 22:69"
+  },
+  {
+    "id": 28,
+    "name": "ٱلْحَكِيمُ",
+    "transliteration": "Al-Hakeem",
+    "title": "The All-Wise",
+    "description": "He is the most intelligent.",
+    "verse": "And if whatever trees upon the earth were pens and the sea [was ink], replenished thereafter by seven [more] seas, the words of Allah would not be exhausted. Indeed, Allah is Exalted in Might and Wise.",
+    "reference": "Quran 31:27"
+  },
+  {
+    "id": 29,
+    "name": "ٱلْحَلِيمُ",
+    "transliteration": "Al-Haleem",
+    "title": "The Most Forbearing",
+    "description": "He delays the punishment for those who deserve it as he may forgive them if they repent.",
+    "verse": "Indeed, Allah holds the heavens and the earth, lest they cease. And if they should cease, no one could hold them [in place] after him. Indeed, he is Forbearing and Forgiving.",
+    "reference": "Quran 35:41"
+  },
+  {
+    "id": 30,
+    "name": "ٱلْحَمِيدُ",
+    "transliteration": "Al-Hameed",
+    "title": "The Praiseworthy",
+    "description": "He is the only one worthy of worship.",
+    "verse": "To Allah belongs whatever is in the heavens and earth. Indeed, Allah is the Free of need, the Praiseworthy.",
+    "reference": "Quran 31:26"
+  },
+  {
+    "id": 31,
+    "name": "ٱلْحَقُ",
+    "transliteration": "Al-Haqq",
+    "title": "The Truth",
+    "description": "He is the only true God.",
+    "verse": "Then they [His servants] are returned to Allah, their true Lord. Unquestionably, His is the judgment, and He is the swiftest of accountants.",
+    "reference": "Quran 6:62"
+  },
+  {
+    "id": 32,
+    "name": "ٱلْحسِيبُ",
+    "transliteration": "Al-Haseeb",
+    "title": "The Reckoner",
+    "description": "He takes all actions into account on the Day of Judgment.",
+    "verse": "...they will say,'Oh, woe to us! What is this book that leaves nothing small or great except that it has enumerated it?' And they will find what they did present [before them]. And your Lord does injustice to no one.",
+    "reference": "Quran 18:49"
+  },
+  {
+    "id": 33,
+    "name": "ٱلْحَيُّ",
+    "transliteration": "Al-Hayy",
+    "title": "The Ever-Living",
+    "description": "He is the eternal.",
+    "verse": " Allah - There is no deity except Him, the Ever-Living, the Sustainer of [all] existence. Neither drowsiness overtakes Him nor sleep. To Him belongs whatever is in the heavens and whatever is on earth...",
+    "reference": "Quran 2:255"
+  },
+  {
+    "id": 34,
+    "name": "ٱلْجَامِعُ",
+    "transliteration": "Al-Jaamiʿ",
+    "title": "The Gatherer",
+    "description": "He has the power to assemble and arrange all that which has been dispersed.",
+    "verse": "Our Lord, surely you will gather the people for a day about which there is no doubt. Indeed, Allah does not fail in His promise.",
+    "reference": "Quran 3:9"
+  },
+  {
+    "id": 35,
+    "name": "ٱلْجَبَّارُ",
+    "transliteration": "Al-Jabbaar",
+    "title": "The Compeller & The Restorer",
+    "description": "Whatever he wills happens without fail.",
+    "verse": "His command is only when He intends a thing that He says to it, 'Be,' and it is.",
+    "reference": "Quran 36:82"
+  },
+  {
+    "id": 36,
+    "name": "ٱلْجَلِيلُ",
+    "transliteration": "Al-Jaleel",
+    "title": "The Majestic",
+    "description": "He is attributed with greatness of power and glory.",
+    "verse": "And there will remain the Face of your Lord, Owner of Majesty and Honor.",
+    "reference": "Quran 55:27"
+  },
+  {
+    "id": 37,
+    "name": "ٱلْكَبِيرُ",
+    "transliteration": "Al-Kabeer",
+    "title": "The Most Grand",
+    "description": "He is great in all aspects.",
+    "verse": "[He is} Knower of the unseen and the witnessed, the Grand, the Exalted.",
+    "reference": "Quran 13:9"
+  },
+  {
+    "id": 38,
+    "name": "ٱلْكَرِيمُ",
+    "transliteration": "Al-Kareem",
+    "title": "The Most Generous",
+    "description": "He is gracious and rewarding those who do good and are grateful.",
+    "verse": "And whoever is grateful - his gratitude is only for [the benefit] of himself. And whoever is ungrateful - then indeed, my Lord is free of need and Generous.",
+    "reference": "Quran 27:40"
+  },
+  {
+    "id": 39,
+    "name": "ٱلْخَافِضُ",
+    "transliteration": "Al-Khaafidh",
+    "title": "The Reducer",
+    "description": "He lowers the status of people as a means to make them humble.",
+    "verse": "We have certainly created man in the best of stature; Then We return him to the lowest of the low, Except for those who believe and do righteous deeds, for they will have a reward uninterrupted.",
+    "reference": "Quran 95:4-6"
+  },
+  {
+    "id": 40,
+    "name": "ٱلْخَالِقُ",
+    "transliteration": "Al-Khaaliq",
+    "title": "The Creator",
+    "description": "He creates everyone and everything from nothing.",
+    "verse": "He is Allah, the Creator, the Inventor, the Fashioner; to Him belong the best names. Whatever is in the heavens and earth is exalting Him. And He is the Exalted in Might, the Wise.",
+    "reference": "Quran 59:24"
+  },
+  {
+    "id": 41,
+    "name": "ٱلْخَبِيرُ",
+    "transliteration": "Al-Khabeer",
+    "title": "The All-Aware",
+    "description": "He is aware and knows the truth of every matter.",
+    "verse": "O you who have believed, fear Allah. And let every soul look to what it has put forth for tomorrow -  and fear Allah. Indeed, Allah is aware of what you do.",
+    "reference": "Quran 59:18"
+  },
+  {
+    "id": 42,
+    "name": "ٱلْلَّطِيفُ",
+    "transliteration": "Al-Lateef",
+    "title": "The Most Gentle & The Subtle One",
+    "description": "He is kind to his creation.",
+    "verse": "Do you not see that Allah has sent down rain from the sky and the earth becomes green? Indeed, Allah is Subtle and Acquainted.",
+    "reference": "Quran 22:63"
+  },
+  {
+    "id": 43,
+    "name": "ٱلْمَاجِدُ",
+    "transliteration": "Al-Maajid",
+    "title": "The Glorious",
+    "description": "He is the most high and noble.",
+    "verse": "And He is the Forgiving, the Affectionate, Glorious Owner of the Throne, Effecter of what He intends.",
+    "reference": "Quran 85:14-16"
+  },
+  {
+    "id": 44,
+    "name": "مَالِكُ ٱلْمُلْكِ",
+    "transliteration": "Maalik-ul-Mulk",
+    "title": "The Owner of the Dominion",
+    "description": "He is a sole owner of all creation and has full authority.",
+    "verse": "Do you not know that to Allah belongs the dominion of the heavens and the earth and [that] you have not besides Allah any protector or any helper?.",
+    "reference": "Quran 2:107"
+  },
+  {
+    "id": 45,
+    "name": "ٱلْمَانِعُ",
+    "transliteration": "Al-Maaniʿ",
+    "title": "The Withholder & The Preventer",
+    "description": "He withholds bounty from those undeserving.",
+    "verse": "Or who is it that could provide for you if He withheld his provision? But they have persisted in insolence and aversion.",
+    "reference": "Quran 67:21"
+  },
+  {
+    "id": 46,
+    "name": "ٱلْمَجِيدُ",
+    "transliteration": "Al-Majeed",
+    "title": "The Most Honorable",
+    "description": "He is the only one deserving of all praise and honor.",
+    "verse": "They said,'Are you amazed at the decree of Allah? May the mercy of Allah and His blessings be upon you, people of the house. Indeed, he is Praiseworthy and Honorable’.",
+    "reference": "Quran 11:73"
+  },
+  {
+    "id": 47,
+    "name": "ٱلْمَلِكُ",
+    "transliteration": "Al-Malik",
+    "title": "The King",
+    "description": "He is the ruler of the heavens and the earth.",
+    "verse": "He is Allah, other than whom there is no god, the Sovereign, the Pure, the Perfection, the Bestower of Faith, the Overseer, the Exalted in Might, the Compeller, the Superior...",
+    "reference": "Quran 59:23"
+  },
+  {
+    "id": 48,
+    "name": "ٱلْمَتِينُ",
+    "transliteration": "Al-Mateen",
+    "title": "The Steadfast & Firm",
+    "description": "He is firm in power and strength. Nothing disrupts or exhausts Him.",
+    "verse": "Indeed, it is Allah who is the Provider, The firm possessor of strength.",
+    "reference": "Quran 51:58"
+  },
+  {
+    "id": 49,
+    "name": "ٱلْمُؤَخِّرُ",
+    "transliteration": "Al-Mu'akh-khir",
+    "title": "The Delayer",
+    "description": "He delays and causes matters to occur later based on his wisdom.",
+    "verse": "Allah will forgive you of your sins and delay you for a specified term. Indeed, the time [set by] Allah, when it comes, will not be delayed, if you only knew.",
+    "reference": "Quran 71:4"
+  },
+  {
+    "id": 50,
+    "name": "ٱلْمُعِيدُ",
+    "transliteration": "Al-Mu'id",
+    "title": "The Restorer",
+    "description": "He restores and brings back all mankind after death.",
+    "verse": "He brings the living out of the dead and brings the dead out of the living and brings to life the earth after its lifelessness. And thus will you be brought out.",
+    "reference": "Quran 30:19"
+  },
+  {
+    "id": 51,
+    "name": "ٱلْمُؤْمِنُ",
+    "transliteration": "Al-Mu'min",
+    "title": "The Granter of Faith",
+    "description": "He grants faith and security.",
+    "verse": "So whoever does good and is a believer will never be denied [the reward for] their striving, for We are recording it all.",
+    "reference": "Quran 21:94"
+  },
+  {
+    "id": 52,
+    "name": "ٱلْمُبْدِئُ",
+    "transliteration": "Al-Mubdi",
+    "title": "The Originator",
+    "description": "He is the originator of all creation.",
+    "verse": "Have they not considered how Allah begins creation and then repeats it? Indeed that, for Allah, is easy.",
+    "reference": "Quran 29:19"
+  },
+  {
+    "id": 53,
+    "name": "ٱلْمُذِلُّ",
+    "transliteration": "Al-Mudhill",
+    "title": "The Dishonorer & The Humiliator",
+    "description": "He humbles and humiliates those who disbelieve or disobey Him.",
+    "verse": "...But upon many the punishment has been justified. And he whom Allah humiliates - for him there is no bestower of honor. Indeed, Allah does what He wills.",
+    "reference": "Quran 22:18"
+  },
+  {
+    "id": 54,
+    "name": "ٱلْمُغْنِيُّ",
+    "transliteration": "Al-Mughnee",
+    "title": "The Enricher & The Bestower of Sufficiency",
+    "description": "He gives abundantly and provides His creation with all that is needed.",
+    "verse": "And if you fear poverty, Allah will enrich you from His bounty if He wills. Indeed, Allah is Knowing and Wise.",
+    "reference": "Quran 9:28"
+  },
+  {
+    "id": 55,
+    "name": "ٱلْمُهَيْمِنُ",
+    "transliteration": "Al-Muhaymin",
+    "title": "The Overseer",
+    "description": "He is aware of all his creation and everything within it.",
+    "verse": "He knows what is in the heavens and earth; He knows what you conceal and what you reveal; God knows very well the secrets of every heart.",
+    "reference": "Quran 64:4"
+  },
+  {
+    "id": 56,
+    "name": "ٱلْمُحْصِي",
+    "transliteration": "Al-Muhsee",
+    "title": "The Counter",
+    "description": "Every deed is known by Allah and recorded by His angels.",
+    "verse": "And Indeed, [appointed] over you are keepers, Noble and recording; They know whatever you do.",
+    "reference": "Quran 82:10-12"
+  },
+  {
+    "id": 57,
+    "name": "ٱلْمُحْيِي",
+    "transliteration": "Al-Muhyee",
+    "title": "The Giver of Life",
+    "description": "He is the one who gives life and the one who takes it away.",
+    "verse": "And indeed, it is We who give life and cause death, and We are the Inheritor.",
+    "reference": "Quran 15:23"
+  },
+  {
+    "id": 58,
+    "name": "ٱلْمُجِيبُ",
+    "transliteration": "Al-Mujeeb",
+    "title": "The Responding One",
+    "description": "He answers and rescues the one in need if he calls upon Him.",
+    "verse": "Is He [not best] who responds to the desperate one when he calls upon Him and removes evil and makes you inheritors of the earth? ...",
+    "reference": "Quran 27:62"
+  },
+  {
+    "id": 59,
+    "name": "ٱلْمُمِيتُ",
+    "transliteration": "Al-Mumeet",
+    "title": "The Bringer of Death",
+    "description": "He causes death at an appointed time with no escape.",
+    "verse": "Wherever you may be, death will overtake you, even if you should be within towers of lofty construction.",
+    "reference": "Quran 4:78"
+  },
+  {
+    "id": 60,
+    "name": "ٱلْمُنْتَقِمُ",
+    "transliteration": "Al-Muntaqim",
+    "title": "The Avenger & The Inflictor of Retribution",
+    "description": "He punishes the sinners in order to discipline them.",
+    "verse": "And who is more unjust than one who is reminded of the verses of his Lord; then he turns away from them? Indeed We, from the criminals, will take retribution.",
+    "reference": "Quran 32:22"
+  },
+  {
+    "id": 61,
+    "name": "ٱلْمُقَدِّمُ",
+    "transliteration": "Al-Muqaddim",
+    "title": "The Expediter",
+    "description": "He expedites and causes matters to occur sooner based on His wisdom.",
+    "verse": "...And when their term has come, they will not remain behind an hour, nor will they proceed[it].",
+    "reference": "Quran 16:61"
+  },
+  {
+    "id": 62,
+    "name": "ٱلْمُقِيتُ",
+    "transliteration": "Al-Muqeet",
+    "title": "The Maintainer & Sustainer",
+    "description": "He gives strength and nourishment to all creation and maintains all that exists.",
+    "verse": "And there is no creature on earth but that upon Allah is its provision, and He knows its place of dwelling and place of storage. All is in a clear register.",
+    "reference": "Quran 11:6"
+  },
+  {
+    "id": 63,
+    "name": "ٱلْمُقْسِطُ",
+    "transliteration": "Al-Muqsit",
+    "title": "The Most Fair",
+    "description": "He is just in every matter.",
+    "verse": "Allah witnesses that there is no deity except Him, and so do the angels and those of knowledge - [that He is] maintaining [creation] in justice. There is no deity except Him, the Exalted in Might, the Wise.",
+    "reference": "Quran 3:18"
+  },
+  {
+    "id": 64,
+    "name": "ٱلْمُقْتَدِرُ",
+    "transliteration": "Al-Muqtadir",
+    "title": "The Dominant & The Powerful",
+    "description": "He has total strength, power, and mastery.",
+    "verse": "They denied Our signs, all of them, so We seized them with a seizure of one Exalted in Might and Perfect Ability.",
+    "reference": "Quran 54:42"
+  },
+  {
+    "id": 65,
+    "name": "ٱلْمُصَوِّرُ",
+    "transliteration": "Al-Musawwir",
+    "title": " The Sculptor",
+    "description": "He shapes his creation in different forms.",
+    "verse": "He made for you hearing and vision and hearts [intellect] that perhaps you would be grateful.",
+    "reference": "Quran 16:78"
+  },
+  {
+    "id": 66,
+    "name": "ٱلْمُتَكَبِّرُ",
+    "transliteration": "Al-Mutakabbir",
+    "title": "The Dominant One & The Supreme",
+    "description": "He is clear from the attributes of mankind.",
+    "verse": "He is Allah...The Superior. Exalted is Allah above whatever they associate with Him.",
+    "reference": "Quran 59:23"
+  },
+  {
+    "id": 67,
+    "name": "ٱلْمُتَعَالِي",
+    "transliteration": "Al-Mutaʿali",
+    "title": "The Most Exalted",
+    "description": "He is the most high and the most exalted above all creation.",
+    "verse": "[He is] Knower of the unseen and the seen, the Grand, the Exalted.",
+    "reference": "Quran 13:9"
+  },
+  {
+    "id": 68,
+    "name": "ٱلْمُعِزُّ",
+    "transliteration": "Al-Muʿizz",
+    "title": "The Honorer-Bestower",
+    "description": "He strengthens, honors, and glorifies His servants.",
+    "verse": "Say,'O Allah...You honor whom You will and You humble whom You will. In Your hands is [all] good. Indeed, You are over all things competent'.",
+    "reference": "Quran 3:26"
+  },
+  {
+    "id": 69,
+    "name": "ٱلنَّافِعُ",
+    "transliteration": "An-Naafiʿ",
+    "title": "The Bestower of Good",
+    "description": "He can allow benefit to reach whomever He wills.",
+    "verse": "Do they not see that Allah extends provision for which He wills and restricts [it]? Indeed, in that are signs for people who believe.",
+    "reference": "Quran 30:37"
+  },
+  {
+    "id": 70,
+    "name": "ٱلنُّورُ",
+    "transliteration": "An-Noor",
+    "title": "The Light",
+    "description": "His light provides clarity and guidance.",
+    "verse": "Allah is the Light of the heavens and the earth... Allah guides to His light whom He wills. And Allah presents examples for the people, and Allah is Knowing of all things.",
+    "reference": "Quran 24:35"
+  },
+  {
+    "id": 71,
+    "name": "ٱلْقَابِضُ",
+    "transliteration": "Al-Qaabid",
+    "title": "The Restricting One & The Withholder",
+    "description": "He withholds abundance. He is the one who enriches and makes poor.",
+    "verse": "...And it is Allah who withholds and grants abundance, and to Him you will be returned.",
+    "reference": "Quran 2:245"
+  },
+  {
+    "id": 72,
+    "name": "ٱلْقَادِرُ",
+    "transliteration": "Al-Qaadir",
+    "title": "The Capable",
+    "description": "Whenever He decrees a thing, it is. Nothing can interrupt the will of Allah.",
+    "verse": "Do they not see that Allah who created the heavens and earth and did not fail in their creation, is able to give life to the dead? Yes. Indeed, He is over all things competent.",
+    "reference": "Quran 46:33"
+  },
+  {
+    "id": 73,
+    "name": "ٱلْقَهَّارُ",
+    "transliteration": "Al-Qahhaar",
+    "title": "The All-Prevailing One",
+    "description": "He has power over everything.",
+    "verse": "The Day they come forth nothing concerning them will be concealed from Allah. To whom belongs [all] sovereignty this Day? To Allah, the One, the Prevailing.",
+    "reference": "Quran 40:16"
+  },
+  {
+    "id": 74,
+    "name": "ٱلْقَوِيُ",
+    "transliteration": "Al-Qawee",
+    "title": "The Most Strong",
+    "description": "He is the only one with complete power and strength.",
+    "verse": "...And Allah will surely support those who support Him [His cause]. Indeed, Allah is Powerful and Exalted in Might.",
+    "reference": "Quran 22:40"
+  },
+  {
+    "id": 75,
+    "name": "ٱلْقَيُّومُ",
+    "transliteration": "Al-Qayyoom",
+    "title": "The Sustainer",
+    "description": "He is a self-existing one upon Whom all others depend.",
+    "verse": "Allah - there is no deity except Him, the Ever-Living, the Sustainer of existence.",
+    "reference": "Quran 3:2"
+  },
+  {
+    "id": 76,
+    "name": "ٱلْقُدُّوسُ",
+    "transliteration": "Al-Quddoos",
+    "title": "The Most Sacred & The Pure",
+    "description": "He is pure from any imperfection.",
+    "verse": "Whatever is in the heavens and whatever is on the earth is exalting Allah, The Sovereign, the Pure, the Exalted in Might, the Wise.",
+    "reference": "Quran 62:1"
+  },
+  {
+    "id": 77,
+    "name": "ٱلرَّؤُوفُ",
+    "transliteration": "Ar-Ra'oof",
+    "title": "The Most Kind",
+    "description": "He is extremely compassionate.",
+    "verse": "It is He who sends down... clear evidence that He may bring you out from darkness into the light. And indeed, Allah is to you Kind and Merciful.",
+    "reference": "Quran 57:9"
+  },
+  {
+    "id": 78,
+    "name": "ٱلرَّافِعُ",
+    "transliteration": "Ar-Raafiʿ",
+    "title": "The Elevating One & The Exalter",
+    "description": "He chooses who will be raised in rank and status.",
+    "verse": "...Allah will raise those who have believed among you and those who were given knowledge, by degrees. And Allah is Aware of what you do.",
+    "reference": "Quran 58:11"
+  },
+  {
+    "id": 79,
+    "name": "ٱلرَّحِيمُ",
+    "transliteration": "Ar-Rahim",
+    "title": "The Especially Merciful",
+    "description": "He shows extra mercy to the believers.",
+    "verse": "...And ever is He, to the believers, Merciful.",
+    "reference": "Quran 33:43"
+  },
+  {
+    "id": 80,
+    "name": "ٱلرَّحْمَـانُ",
+    "transliteration": "Ar-Rahman",
+    "title": "The Entirely Merciful",
+    "description": "He shows mercy to all creation.",
+    "verse": "Call upon Allah or call upon the Most Merciful [Ar-Rahman]. Whichever name you call - to Him belong the best names...",
+    "reference": "Quran 17:110"
+  },
+  {
+    "id": 81,
+    "name": "ٱلرَّقِيبُ",
+    "transliteration": "Ar-Raqeeb",
+    "title": "The Watchful",
+    "description": "He is observant of His creation. There is nothing absent or hidden from Him.",
+    "verse": "...He knows what penetrates the earth and what emerges from it and what descends from the heaven and what ascends therein; and He is with you wherever you are. And Allah, of what you do, is Seeing.",
+    "reference": "Quran 57:4"
+  },
+  {
+    "id": 82,
+    "name": "ٱلرَّشِيدُ",
+    "transliteration": "Ar-Rasheed",
+    "title": "The One Who Guides",
+    "description": "He is a supreme director to the right path and right belief.",
+    "verse": "...So whoever disbelieves in idols and believes in Allah has grasped the most trustworthy handhold with no break in it. And Allah is Hearing and Knowing.",
+    "reference": "Quran 2:256"
+  },
+  {
+    "id": 83,
+    "name": "ٱلرَّزَّاقُ",
+    "transliteration": "Ar-Razzaaq",
+    "title": "The Provider",
+    "description": "He provides sustenance for all His creations.",
+    "verse": "...Is there any creator other than Allah who provides for you from the heaven and earth? There is no god except Him, so how are you deluded?.",
+    "reference": "Quran 35:3"
+  },
+  {
+    "id": 84,
+    "name": "ٱلصَّبُورُ",
+    "transliteration": "As-Saboor",
+    "title": "The Patient",
+    "description": "He delays and does not quickly punish the sinners.",
+    "verse": "And be patient, [O Muhammad], and your patience is not but through Allah. And do not grieve over them and do not be in distress over what they conspire.",
+    "reference": "Quran 16:127"
+  },
+  {
+    "id": 85,
+    "name": "ٱلسَّلَامُ",
+    "transliteration": "As-Salam",
+    "title": "The Giver of Peace.",
+    "description": "He grants peace and security.",
+    "verse": "And Allah invites to the home of Peace[Paradise] and guides whom he wills to a straight path.",
+    "reference": "Quran 10:25"
+  },
+  {
+    "id": 86,
+    "name": "ٱلصَّمَدُ",
+    "transliteration": "As-Samad",
+    "title": "The Supreme Provider",
+    "description": "He is the primary provider, and He is relied upon by all.",
+    "verse": "Allah, the Eternal Refuge.",
+    "reference": "Quran 112:2"
+  },
+  {
+    "id": 87,
+    "name": "ٱلسَّمِيعُ",
+    "transliteration": "As-Sameeʿ",
+    "title": "The All-Hearing",
+    "description": "He hears everything, including thoughts and heart murmurs.",
+    "verse": "...And Allah is Hearing and Knowing.",
+    "reference": "Quran 2:256"
+  },
+  {
+    "id": 88,
+    "name": "ٱلشَّهِيدُ",
+    "transliteration": "Ash-Shaheed",
+    "title": "The Witness",
+    "description": "He is always present and observant of everything and everyone.",
+    "verse": "But Allah bears witness to that which He has revealed to you. He has sent it down with His knowledge, and the angels bear witness [as well]. And sufficient is Allah as Witness.",
+    "reference": "Quran 4:166"
+  },
+  {
+    "id": 89,
+    "name": "ٱلشَّكُورُ",
+    "transliteration": "Ash-Shakoor",
+    "title": "The Most Appreciative",
+    "description": "He appreciates and rewards those who do good.",
+    "verse": "If you loan Allah a goodly loan, He will multiply it for you and forgive you. And Allah is Most Appreciative and Forbearing.",
+    "reference": "Quran 64:17"
+  },
+  {
+    "id": 90,
+    "name": "ٱلتَّوَابُ",
+    "transliteration": "At-Tawwaab",
+    "title": "The Acceptor of Repentance",
+    "description": "He forgives those who repent.",
+    "verse": "Then exalt [Him] with praise of your Lord and ask forgiveness of Him. Indeed, He is ever accepting of repentance.",
+    "reference": "Quran 110:3"
+  },
+  {
+    "id": 91,
+    "name": "ٱلْواحِدُ",
+    "transliteration": "Al-Waahid",
+    "title": "The Only One",
+    "description": "He is the only one God (in number).",
+    "verse": "And your god is one God. There is no deity [worthy of worship] except Him, the Entirely Merciful, the Especially Merciful.",
+    "reference": "Quran 2:163"
+  },
+  {
+    "id": 92,
+    "name": "ٱلْوَاجِدُ",
+    "transliteration": "Al-Waajid",
+    "title": "The Perceiver & The Finder",
+    "description": "He is rich, independent, and resourceful. He attains whatever He wills.",
+    "verse": "And He found you poor and made [you] self-sufficient.",
+    "reference": "Quran 93:8"
+  },
+  {
+    "id": 93,
+    "name": "ٱلْوَالِي",
+    "transliteration": "Al-Waalee",
+    "title": "The Patron",
+    "description": "He has authority and manages everyone's condition.",
+    "verse": "Indeed, Allah will not change the condition of a people until they change what is in themselves. And when Allah intends for a people ill, there is no repelling it. And there is not for them besides Him any patron.",
+    "reference": "Quran 13:11"
+  },
+  {
+    "id": 94,
+    "name": "ٱلْوَارِثُ",
+    "transliteration": "Al-Waarith",
+    "title": "The Inheritor",
+    "description": "All possessions [souls] will be returned to him.",
+    "verse": "And indeed, it is We who give life and cause death, and We are the Inheritor.",
+    "reference": "Quran 15:23"
+  },
+  {
+    "id": 95,
+    "name": "ٱلْوَاسِعُ",
+    "transliteration": "Al-Waasiʿ",
+    "title": "The All-Encompassing",
+    "description": "His knowledge, mercy, and bounty are vast and limitless.",
+    "verse": "Say,'Indeed,[all] bounty is in the hand of Allah - He grants it to whom He wills. And Allah is all-Encompassing and Wise.'",
+    "reference": "Quran 3:73"
+  },
+  {
+    "id": 96,
+    "name": "ٱلْوَدُودُ",
+    "transliteration": "Al-Wadood",
+    "title": "The Most Loving",
+    "description": "He is the source of all love and kindness.",
+    "verse": "...Indeed, Allah loves those who are constantly repentant and loves those who purify themselves.\n...Allah loves those who are patient.\n...Allah loves those who rely [upon Him].\n...Allah loves those who are just.",
+    "reference": "Quran 2:222, 3:146, 3:159, 5:42"
+  },
+  {
+    "id": 97,
+    "name": "ٱلْوَهَّابُ",
+    "transliteration": "Al-Wahhaab",
+    "title": "The Supreme Bestower",
+    "description": "He gives generously and expects nothing in return.",
+    "verse": "He said ,'My Lord, forgive me and grant me a kingdom such as will not belong to anyone after me. Indeed, You are the Bestower'.",
+    "reference": "Quran 38:35"
+  },
+  {
+    "id": 98,
+    "name": "ٱلْوَكِيلُ",
+    "transliteration": "Al-Wakeel",
+    "title": "The Disposer of Affairs & The Trustee",
+    "description": "He is the only one who can be trusted with all affairs.",
+    "verse": "[He is] the Lord of the East and the West; there is no deity except Him, so take Him as Disposer of [your] affairs.",
+    "reference": "Quran 73:9"
+  },
+  {
+    "id": 99,
+    "name": "ٱلْوَلِيُّ",
+    "transliteration": "Al-Walee",
+    "title": "The Protector",
+    "description": "He protects, guards, and supports the believers.",
+    "verse": "Indeed, my protector is Allah, who has sent down the Book; and He is an ally to the righteous.",
+    "reference": "Quran 7:196"
   }
 ]
