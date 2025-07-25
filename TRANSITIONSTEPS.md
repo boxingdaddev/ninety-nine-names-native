@@ -1,73 +1,32 @@
-# Transition Steps: Folder Reorganization
+# Transition Steps – July 2025 Reorganization
 
-This document outlines how to reorganize the project from a flat structure into a scalable folder layout (components, hooks, utils, screens).
-
----
-
-## 1. Why Transition?
-
-- **Scalability**: Easier to add new features (screens, hooks) without clutter.
-- **Clarity**: UI components, logic hooks, and helpers are clearly separated.
-- **Maintainability**: Future contributors can quickly navigate the codebase.
+## Goal
+Reorganize the project into a maintainable structure, simplify code, and remove unstable shuffle logic for an immediate production push.
 
 ---
 
-## 2. Step-by-Step Plan
+## What Changed
 
-### Step 1: Prepare New Folders
-```bash
-mkdir components hooks screens utils assets
-```
+### Folder Reorganization
+- Created `components/`, `screens/`, `hooks/`, `utils/`, and `assets/data/`
+- Moved `FlipCard`, `DotIndicator`, and `MoonBadge` to `components/`
+- Created `HomeScreen.jsx` for horizontal swipe logic
+- Extracted bookmark logic into `useBookmarks.js`
 
----
+### Feature Adjustments
+- Removed `sort-names.js` (alphabetical order handled by JSON)
+- Removed shuffle logic (vertical swipe) for stability
+- Horizontal swipe implemented via `FlatList` with proper snapping
 
-### Step 2: Move Files
-```bash
-mv FlipCard.jsx components/
-mv DotIndicator.jsx components/
-mv sort-names.js utils/
-# If MoonBadge.jsx is reintroduced → components/
-```
-
----
-
-### Step 3: Update Imports
-Update file paths in `App.js` (and other affected files):
-
-```javascript
-import FlipCard from './components/FlipCard';
-import DotIndicator from './components/DotIndicator';
-import sortNames from './utils/sort-names';
-```
+### Styling Fixes
+- Cards centered at 85% width with background margins
+- Dot indicator repositioned to bottom center (`bottom: 40`)
+- Special-case font size for long Arabic names (ID 20)
 
 ---
 
-### Step 4: Test App
-Run Expo in tunnel mode and verify the app works:
-
-```bash
-npx expo start --tunnel
-```
-
-- Ensure cards flip correctly
-- Verify shuffle toggle
-- Check bookmark icons still function
-
----
-
-### Step 5: Commit Changes
-```bash
-git add .
-git commit -m "Restructure project into components/hooks/utils/screens"
-git push
-```
-
----
-
-## 3. Post-Transition Checklist
-
-- `.gitignore` still ignores `node_modules/`, caches, and `package-lock.json`
-- `npm-shrinkwrap.json` is present and committed
-- App works on all machines (test on laptop + desktop)
-
----
+## Future Steps
+- Reintroduce shuffle using Gesture API (vertical swipe)
+- Implement bookmark filtering and counters
+- Add local persistence (AsyncStorage) for bookmarks
+- Consider multiple screens (settings, bookmark views)

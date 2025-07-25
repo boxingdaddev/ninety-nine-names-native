@@ -1,119 +1,77 @@
-# Architecture Overview
+# Ninety-Nine Names Native – Architecture
 
-## Project Structure
-```
-ninety-nine-names-native/
-│
-├── App.js                 # Entry point (FlatList, shuffle, navigation)
-├── FlipCard.jsx           # Flip card component: front/back design, bookmarking icons
-├── DotIndicator.jsx       # Dots for current card index
-├── sort-names.js          # Alphabetical sorting utility
-├── 99names.json           # Local data: Arabic, transliteration, meaning
-│
-├── components/
-│   └── MoonBadge.jsx      # Decorative badge (currently unused)
-│
-├── package.json           # Dependencies and scripts
-├── npm-shrinkwrap.json    # Locked dependency versions
-├── .gitignore             # Ignored files (node_modules, caches, package-lock)
-└── README.md              # Setup and usage guide
-```
+## Overview
+This React Native (Expo) app displays the 99 Names of Allah as interactive flashcards with horizontal swipe navigation. Users can bookmark cards into three categories (❤️ Favorites, 📖 Studying, 🧠 Memorized).  
+
+The app is designed to be modular and scalable, with separate folders for components, screens, hooks, utilities, and assets.
 
 ---
 
-## Key Files
+## Folder Structure
 
-### App.js
-- Loads names from `99names.json`
-- Manages shuffle vs alphabetical toggle
-- Renders `FlipCard` via FlatList
-- Tracks and updates current index
-
-### FlipCard.jsx
-- Flip animation using `react-native-card-flip`
-- Shows Arabic, transliteration, and meaning
-- Integrates ❤️, 📖, 🧠 bookmarking UI
-- Scales Arabic text for extra-long names
-
-### DotIndicator.jsx
-- Renders dots for navigation
-- Dynamically groups dots when > max visible (e.g., 99 names)
-
-### sort-names.js
-- Provides alphabetical sorting and restore to original order
+project-root/
+│
+├── App.js # Entry point
+├── assets/
+│ └── data/99names.json # Static names data
+│
+├── components/ # Reusable UI
+│ ├── FlipCard.jsx # Front/back flashcard
+│ ├── DotIndicator.jsx # Page indicator
+│ └── MoonBadge.jsx # Decorative badge (card front)
+│
+├── hooks/
+│ └── useBookmarks.js # Bookmark logic (favorites, studying, memorized)
+│
+├── screens/
+│ └── HomeScreen.jsx # Main screen with FlatList and horizontal navigation
+│
+└── utils/
+└── shuffle-names.js # (Currently unused – for future shuffle feature)
 
 ---
 
 ## Data Flow
 
-1. **Data source**: `99names.json`
-2. **App.js**: Loads & sorts/shuffles → passes data to `FlipCard`
-3. **FlipCard.jsx**: Handles flip UI and bookmarking interactions
-4. **DotIndicator.jsx**: Shows current position visually
+1. **App.js**
+   - Imports `99names.json`
+   - Initializes bookmark state via `useBookmarks`
+   - Renders `HomeScreen` with prepared data
+
+2. **HomeScreen.jsx**
+   - Displays cards using `FlatList` (horizontal paging)
+   - Tracks current index for DotIndicator
+   - (Future) Can reintroduce vertical swipe shuffle
+
+3. **FlipCard.jsx**
+   - Displays Arabic, transliteration, meaning, verse, and reference
+   - Handles front/back flip on tap
+   - Bookmark icons trigger updates via callbacks from `App.js`
+
+4. **DotIndicator.jsx**
+   - Shows active card position
+   - Supports large lists by chunking dots if needed
 
 ---
 
-## Future Plans & Roadmap
+## Styling Notes
 
-### Bookmark Storage System
-- Persist ❤️, 📖, 🧠 states with AsyncStorage
-- Provide screens to view filtered bookmarks
-- Add memorization counter (“x of 99 memorized”)
-
-### Advanced Shuffle Controls
-- Support shake-to-shuffle (expo-sensors)
-- Swipe up/down to shuffle
-- Reset to alphabetical toggle
-
-### Typography & Layout
-- Custom Arabic fonts (optional)
-- Dynamic font scaling for long names
-
-### Performance
-- Optimize FlatList with windowing
-- Cache sorted/shuffled arrays
-- Improve dot indicator rendering
-
-### Code Structure
-- Extract state logic into hooks/context
-- Prepare screens for multi-view navigation
-
-### Internationalization
-- Add multi-language support for translations
-
-### Testing
-- Unit tests with Jest
-- E2E gesture tests with Detox
+- Cards use **0.85 width factor** to show background margins for aesthetics
+- Dot indicator is **centered and positioned** near bottom (`bottom: 40`)
+- Special handling for **long Arabic names** (e.g., ID 20) with smaller font
 
 ---
 
-## Planned Folder Reorganization
+## Current Limitations
 
-```
-ninety-nine-names-native/
-├── App.js
-├── 99names.json
-│
-├── components/      # UI building blocks
-│   ├── FlipCard.jsx
-│   ├── DotIndicator.jsx
-│   └── MoonBadge.jsx
-│
-├── hooks/           # State and logic hooks
-│   ├── useBookmarks.js
-│   └── useShuffle.js
-│
-├── screens/         # Full-screen layouts (future)
-│   ├── HomeScreen.jsx
-│   └── BookmarksScreen.jsx
-│
-├── utils/           # Helper utilities
-│   └── sort-names.js
-│
-└── assets/          # Fonts, images, etc.
-```
+- Shuffle logic removed for now (vertical swipe reserved for future)
+- Data assumes **JSON is pre-sorted alphabetically**
 
-### Transition Steps
-1. Create folders: `components`, `hooks`, `screens`, `utils`
-2. Move files (e.g., `FlipCard.jsx` → `components/`)
-3. Update imports in `App.js` to match new paths
+---
+
+## Future Enhancements
+
+- Reintroduce vertical swipe shuffle (random vs alphabetical)
+- Bookmark filters and dedicated bookmark screens
+- Persist bookmarks (AsyncStorage or cloud sync)
+- Dynamic font scaling for varying screen sizes
