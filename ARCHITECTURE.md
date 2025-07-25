@@ -11,23 +11,22 @@ The app is designed to be modular and scalable, with separate folders for compon
 
 project-root/
 │
-├── App.js # Entry point
+├── App.js                    # Entry point
 ├── assets/
-│ └── data/99names.json # Static names data
+│   └── data/99names.json     # Static names data
 │
-├── components/ # Reusable UI
-│ ├── FlipCard.jsx # Front/back flashcard
-│ ├── DotIndicator.jsx # Page indicator
-│ └── MoonBadge.jsx # Decorative badge (card front)
-│
-├── hooks/
-│ └── useBookmarks.js # Bookmark logic (favorites, studying, memorized)
+├── components/               # Reusable UI + hooks
+│   ├── FlipCard.jsx          # Front/back flashcard
+│   ├── DotIndicator.jsx      # Page indicator
+│   ├── MoonBadge.jsx         # Decorative badge (card front)
+│   └── hooks/                # Bookmark logic & custom hooks
+│       └── useBookmarks.js   # Bookmark state + persistence (AsyncStorage)
 │
 ├── screens/
-│ └── HomeScreen.jsx # Main screen with FlatList and horizontal navigation
+│   └── HomeScreen.jsx        # Main screen with FlatList and horizontal navigation
 │
 └── utils/
-└── shuffle-names.js # (Currently unused – for future shuffle feature)
+    └── shuffle-names.js      # Future shuffle feature
 
 ---
 

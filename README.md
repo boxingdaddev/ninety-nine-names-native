@@ -92,3 +92,16 @@ git push
 ## Additional Documentation
 
 For deeper architecture and roadmap, see [ARCHITECTURE.md](ARCHITECTURE.md).
+
+
+# Temporarily move shrinkwrap
+mv npm-shrinkwrap.json npm-shrinkwrap.json.bak
+
+# Install package, bypassing peer dependency conflicts
+npm install <package-name> --legacy-peer-deps
+
+# Regenerate shrinkwrap
+npm shrinkwrap
+
+# Remove backup
+rm npm-shrinkwrap.json.bak

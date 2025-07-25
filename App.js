@@ -2,7 +2,7 @@ import React from 'react';
 import { SafeAreaView, StatusBar } from 'react-native';
 import namesData from './assets/data/99names.json';
 import HomeScreen from './screens/HomeScreen';
-import useBookmarks from './hooks/useBookmarks';
+import useBookmarks from './components/hooks/useBookmarks';
 
 export default function App() {
   // Initialize bookmark hook
