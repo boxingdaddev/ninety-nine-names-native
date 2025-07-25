@@ -1,5 +1,16 @@
 # Ninety-Nine Names Native
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+Why MIT License?
+
+This project uses the MIT License to keep things simple and accessible:
+
+    Encourages learning and contributions from the community.
+
+    Allows anyone to use the code with attribution, while I retain credit as the original creator.
+
+    Perfect fit for an indie project and first-time Play Store release — lightweight, no legal overhead.
+
+
 
 A React Native (Expo) app displaying the 99 Names of Allah with flip-card functionality, shuffle mode, and bookmarking (favorites, studying, memorized).
 
