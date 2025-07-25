@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import {
   View,
   Text,
@@ -6,6 +6,7 @@ import {
   Dimensions,
   TouchableWithoutFeedback,
   TouchableOpacity,
+  Animated,
 } from 'react-native';
 import CardFlip from 'react-native-card-flip';
 import { FontAwesome5 } from '@expo/vector-icons';
@@ -28,8 +29,28 @@ export default function FlipCard({
   toggleLoveBookmark,
   isMemorized,
   toggleMemorized,
+  counts,
+  onSummaryToggle,
 }) {
-  const cardRef = passedRef || React.useRef();
+  const cardRef = passedRef || useRef();
+  const pulseAnim = useRef(new Animated.Value(1)).current;
+
+  const handleSummaryTap = () => {
+    Animated.sequence([
+      Animated.timing(pulseAnim, {
+        toValue: 1.2,
+        duration: 120,
+        useNativeDriver: true,
+      }),
+      Animated.timing(pulseAnim, {
+        toValue: 1,
+        duration: 120,
+        useNativeDriver: true,
+      }),
+    ]).start();
+
+    onSummaryToggle();
+  };
 
   return (
     <TouchableWithoutFeedback onPress={() => cardRef.current?.flip()}>
@@ -37,7 +58,7 @@ export default function FlipCard({
         <CardFlip style={styles.cardContainer} ref={cardRef}>
           {/* FRONT */}
           <View style={[styles.card, styles.front]}>
-            <MoonBadge />
+            <MoonBadge number={id} />
 
             <View style={styles.iconRowFront}>
               <TouchableOpacity onPress={toggleLoveBookmark} hitSlop={10}>
@@ -66,6 +87,30 @@ export default function FlipCard({
               </TouchableOpacity>
             </View>
 
+            {/* Blue summary icons */}
+            <Animated.View
+              style={[
+                styles.iconRowSummary,
+                { transform: [{ scale: pulseAnim }] },
+              ]}
+            >
+              {counts.loved > 0 && (
+                <TouchableOpacity onPress={handleSummaryTap} hitSlop={10}>
+                  <FontAwesome5 name="heart" size={22} solid color="#1E3A8A" />
+                </TouchableOpacity>
+              )}
+              {counts.studied > 0 && (
+                <TouchableOpacity onPress={handleSummaryTap} hitSlop={10}>
+                  <FontAwesome5 name="book-open" size={22} color="#1E3A8A" />
+                </TouchableOpacity>
+              )}
+              {counts.memorized > 0 && (
+                <TouchableOpacity onPress={handleSummaryTap} hitSlop={10}>
+                  <FontAwesome5 name="brain" size={22} color="#1E3A8A" />
+                </TouchableOpacity>
+              )}
+            </Animated.View>
+
             <Text style={id === 20 ? styles.arabicLong : styles.arabic}>{name}</Text>
             <Text style={styles.translit}>{transliteration}</Text>
             <Text style={styles.title}>{title}</Text>
@@ -77,7 +122,7 @@ export default function FlipCard({
             <Text style={styles.verse}>"{verse}"</Text>
             <Text style={styles.reference}>{reference}</Text>
 
-            <View style={styles.iconRowBack}>
+            <View style={styles.iconRowFront}>
               <TouchableOpacity onPress={toggleLoveBookmark} hitSlop={10}>
                 <FontAwesome5
                   name="heart"
@@ -103,6 +148,30 @@ export default function FlipCard({
                 />
               </TouchableOpacity>
             </View>
+
+            {/* Blue summary icons on back */}
+            <Animated.View
+              style={[
+                styles.iconRowSummary,
+                { transform: [{ scale: pulseAnim }] },
+              ]}
+            >
+              {counts.loved > 0 && (
+                <TouchableOpacity onPress={handleSummaryTap} hitSlop={10}>
+                  <FontAwesome5 name="heart" size={22} solid color="#1E3A8A" />
+                </TouchableOpacity>
+              )}
+              {counts.studied > 0 && (
+                <TouchableOpacity onPress={handleSummaryTap} hitSlop={10}>
+                  <FontAwesome5 name="book-open" size={22} color="#1E3A8A" />
+                </TouchableOpacity>
+              )}
+              {counts.memorized > 0 && (
+                <TouchableOpacity onPress={handleSummaryTap} hitSlop={10}>
+                  <FontAwesome5 name="brain" size={22} color="#1E3A8A" />
+                </TouchableOpacity>
+              )}
+            </Animated.View>
           </View>
         </CardFlip>
       </View>
@@ -198,7 +267,7 @@ const styles = StyleSheet.create({
     bottom: 12,
     left: 12,
   },
-  iconRowBack: {
+  iconRowSummary: {
     flexDirection: 'row',
     gap: 18,
     position: 'absolute',

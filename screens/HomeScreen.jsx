@@ -13,6 +13,7 @@ export default function HomeScreen({
   toggleMemorized
 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [showBookmarks, setShowBookmarks] = useState(false);
   const flatListRef = useRef(null);
 
   const handleScroll = (event) => {
@@ -22,14 +23,36 @@ export default function HomeScreen({
     setCurrentIndex(index);
   };
 
+  const counts = {
+    loved: bookmarks.loved.length,
+    studied: bookmarks.studied.length,
+    memorized: bookmarks.memorized.length
+  };
+
+  const toggleView = () => {
+    setShowBookmarks(prev => !prev);
+    // Reset index when switching view
+    setCurrentIndex(0);
+    flatListRef.current?.scrollToIndex({ index: 0, animated: false });
+  };
+
+  // Choose data based on toggle
+  const displayedNames = showBookmarks
+    ? names.filter(item =>
+        bookmarks.loved.includes(item.id) ||
+        bookmarks.studied.includes(item.id) ||
+        bookmarks.memorized.includes(item.id)
+      )
+    : names;
+
   return (
     <View style={{ flex: 1 }}>
       <FlatList
         ref={flatListRef}
-        data={names}
+        data={displayedNames}
         horizontal
         pagingEnabled
-        snapToInterval={width}            // Full screen width snap
+        snapToInterval={width}
         decelerationRate="fast"
         showsHorizontalScrollIndicator={false}
         onScroll={handleScroll}
@@ -49,13 +72,14 @@ export default function HomeScreen({
               toggleStudyBookmark={() => toggleStudy(item.id)}
               isMemorized={bookmarks.memorized.includes(item.id)}
               toggleMemorized={() => toggleMemorized(item.id)}
+              counts={counts}
+              onSummaryToggle={toggleView}
             />
           </View>
         )}
         keyExtractor={(item) => item.id.toString()}
       />
 
-      {/* Dot Indicator centered below card */}
       <View
         style={{
           position: 'absolute',
@@ -64,7 +88,7 @@ export default function HomeScreen({
           alignItems: 'center',
         }}
       >
-        <DotIndicator total={names.length} currentIndex={currentIndex} />
+        <DotIndicator total={displayedNames.length} currentIndex={currentIndex} />
       </View>
     </View>
   );

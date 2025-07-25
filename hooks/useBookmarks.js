@@ -1,26 +1,40 @@
 import { useState } from 'react';
+// import AsyncStorage from '@react-native-async-storage/async-storage'; // For future persistence
 
 export default function useBookmarks() {
-  const [bookmarks, setBookmarks] = useState({
-    loved: [],
-    studied: [],
-    memorized: [],
+  const [loved, setLoved] = useState([]);
+  const [studied, setStudied] = useState([]);
+  const [memorized, setMemorized] = useState([]);
+
+  const toggle = (list, setList, id) => {
+    setList(prev => 
+      prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]
+    );
+  };
+
+  const toggleLove = (id) => toggle(loved, setLoved, id);
+  const toggleStudy = (id) => toggle(studied, setStudied, id);
+  const toggleMemorized = (id) => toggle(memorized, setMemorized, id);
+
+  const getCounts = () => ({
+    lovedCount: loved.length,
+    studiedCount: studied.length,
+    memorizedCount: memorized.length,
   });
 
-  const toggle = (type, id) => {
-    setBookmarks((prev) => {
-      const exists = prev[type].includes(id);
-      return {
-        ...prev,
-        [type]: exists ? prev[type].filter((i) => i !== id) : [...prev[type], id],
-      };
-    });
+  const getFilteredData = (names) => {
+    const bookmarkedIds = new Set([...loved, ...studied, ...memorized]);
+    return names.filter(item => bookmarkedIds.has(item.id));
   };
 
   return {
-    bookmarks,
-    toggleLove: (id) => toggle('loved', id),
-    toggleStudy: (id) => toggle('studied', id),
-    toggleMemorized: (id) => toggle('memorized', id),
+    loved,
+    studied,
+    memorized,
+    toggleLove,
+    toggleStudy,
+    toggleMemorized,
+    getCounts,
+    getFilteredData
   };
 }

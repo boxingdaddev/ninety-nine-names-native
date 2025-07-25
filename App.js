@@ -1,29 +1,35 @@
-import React, { useState, useEffect } from 'react';
-import { SafeAreaView } from 'react-native';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import React from 'react';
+import { SafeAreaView, StatusBar } from 'react-native';
 import namesData from './assets/data/99names.json';
-import useBookmarks from './hooks/useBookmarks';
 import HomeScreen from './screens/HomeScreen';
+import useBookmarks from './hooks/useBookmarks';
 
 export default function App() {
-  const { bookmarks, toggleLove, toggleStudy, toggleMemorized } = useBookmarks();
-  const [names, setNames] = useState([]);
+  // Initialize bookmark hook
+  const {
+    loved,
+    studied,
+    memorized,
+    toggleLove,
+    toggleStudy,
+    toggleMemorized,
+    getCounts,
+    getFilteredData
+  } = useBookmarks();
 
-  useEffect(() => {
-    setNames(namesData); // Alphabetical JSON order
-  }, []);
+  // Prepare bookmarks object for HomeScreen
+  const bookmarks = { loved, studied, memorized };
 
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      <SafeAreaView style={{ flex: 1 }}>
-        <HomeScreen
-          names={names}
-          bookmarks={bookmarks}
-          toggleLove={toggleLove}
-          toggleStudy={toggleStudy}
-          toggleMemorized={toggleMemorized}
-        />
-      </SafeAreaView>
-    </GestureHandlerRootView>
+    <SafeAreaView style={{ flex: 1 }}>
+      <StatusBar barStyle="dark-content" />
+      <HomeScreen
+        names={namesData}
+        bookmarks={bookmarks}
+        toggleLove={toggleLove}
+        toggleStudy={toggleStudy}
+        toggleMemorized={toggleMemorized}
+      />
+    </SafeAreaView>
   );
 }
