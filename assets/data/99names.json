@@ -82,6 +82,15 @@
   },
   {
     "id": 10,
+    "name": "ٱلْبَاعِثُ",
+    "transliteration": "Al-Baaʿith",
+    "title": "The Resurrector",
+    "description": "He awakens all mankind after death.",
+    "verse": "And[that they may know] that the Hour is coming - no doubt about it - and that Allah will resurrect those in the graves.",
+    "reference": "Quran 22:7"
+  },
+  {
+    "id": 11,
     "name": "ٱلْبَاقِي",
     "transliteration": "Al-Baaqee",
     "title": "The Everlasting & The Eternal",
@@ -90,7 +99,7 @@
     "reference": "Quran 55:26-27"
   },
   {
-    "id": 11,
+    "id": 12,
     "name": "ٱلْبَارِئُ",
     "transliteration": "Al-Baari`",
     "title": "The Evolver",
@@ -99,7 +108,7 @@
     "reference": "Quran 23:14"
   },
   {
-    "id": 12,
+    "id": 13,
     "name": "ٱلْبَاسِطُ",
     "transliteration": "Al-Baasit",
     "title": "The Extender",
@@ -108,22 +117,13 @@
     "reference": "Quran 13:26"
   },
   {
-    "id": 13,
+    "id": 14,
     "name": "ٱلْبَاطِنُ",
     "transliteration": "Al-Baatin",
     "title": "The Knower of the Unseen & The Unseen One",
     "description": "He is unseen and he is the creator of the unseen.",
     "verse": "[He is] Knower of the unseen, and He does not disclose His [knowledge of the] unseen to anyone except whom He has approved of messengers...",
     "reference": "Quran 72:26-27"
-  },
-  {
-    "id": 14,
-    "name": "ٱلْبَاعِثُ",
-    "transliteration": "Al-Baaʿith",
-    "title": "The Resurrector",
-    "description": "He awakens all mankind after death.",
-    "verse": "And[that they may know] that the Hour is coming - no doubt about it - and that Allah will resurrect those in the graves.",
-    "reference": "Quran 22:7"
   },
   {
     "id": 15,

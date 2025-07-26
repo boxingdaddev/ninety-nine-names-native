@@ -1,15 +1,15 @@
 export default function shuffleNames(array) {
-  let currentIndex = array.length,
-    randomIndex;
+  const arr = [...array]; // clone input
+  let currentIndex = arr.length, randomIndex;
 
   while (currentIndex !== 0) {
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex--;
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex],
-      array[currentIndex],
+    [arr[currentIndex], arr[randomIndex]] = [
+      arr[randomIndex],
+      arr[currentIndex],
     ];
   }
 
-  return array;
+  return arr;
 }

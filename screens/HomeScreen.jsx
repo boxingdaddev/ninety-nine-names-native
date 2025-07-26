@@ -1,7 +1,9 @@
-import React, { useState, useRef } from 'react';
-import { View, FlatList, Dimensions } from 'react-native';
+import React, { useState, useRef, useEffect } from 'react';
+import { View, FlatList, Dimensions, TouchableOpacity } from 'react-native';
 import FlipCard from '../components/FlipCard';
 import DotIndicator from '../components/DotIndicator';
+import AZIcon from '../components/AZIcon'; // New icon component
+import shuffleNames from '../utils/shuffle-names'; // Correct import path
 
 const { width } = Dimensions.get('window');
 
@@ -28,8 +30,35 @@ export default function HomeScreen({
   const [activeCategory, setActiveCategory] = useState(null);
   const [isScrolling, setIsScrolling] = useState(false);
   const [pendingUpdate, setPendingUpdate] = useState(false);
+
+  // Shuffle state (default: shuffled)
+  const [isShuffled, setIsShuffled] = useState(true);
+  const [shuffledNames, setShuffledNames] = useState([]);
+
   const flatListRef = useRef(null);
 
+  // Generate shuffled list on mount or when names change
+  useEffect(() => {
+    setShuffledNames(shuffleNames(names));
+  }, [names]);
+
+  // Toggle shuffle/alpha
+  const handleToggleAlphabetical = () => {
+    if (isShuffled) {
+      // Switch to alphabetical (ID order)
+      setIsShuffled(false);
+      setCurrentIndex(0);
+      flatListRef.current?.scrollToOffset({ offset: 0, animated: false });
+    } else {
+      // Switch back to shuffle
+      setShuffledNames(shuffleNames(names));
+      setIsShuffled(true);
+      setCurrentIndex(0);
+      flatListRef.current?.scrollToOffset({ offset: 0, animated: false });
+    }
+  };
+
+  // Scroll handlers
   const handleScroll = (event) => {
     const index = Math.round(
       event.nativeEvent.contentOffset.x / event.nativeEvent.layoutMeasurement.width
@@ -38,7 +67,6 @@ export default function HomeScreen({
   };
 
   const handleMomentumScrollBegin = () => setIsScrolling(true);
-
   const handleMomentumScrollEnd = () => {
     setIsScrolling(false);
     if (pendingUpdate) {
@@ -68,17 +96,20 @@ export default function HomeScreen({
   const throttledToggleMemorized = (id) =>
     safeToggle(() => throttle(toggleMemorized, 200)(id));
 
-  // Compute filtered list
+  // Determine base list: shuffled or alphabetical
+  let baseNames = isShuffled ? shuffledNames : names;
+
+  // Apply bookmark filtering
   let displayedNames =
     activeCategory === 'loved'
-      ? names.filter((item) => bookmarks.loved.includes(item.id))
+      ? baseNames.filter((item) => bookmarks.loved.includes(item.id))
       : activeCategory === 'studied'
-        ? names.filter((item) => bookmarks.studied.includes(item.id))
-        : activeCategory === 'memorized'
-          ? names.filter((item) => bookmarks.memorized.includes(item.id))
-          : names;
+      ? baseNames.filter((item) => bookmarks.studied.includes(item.id))
+      : activeCategory === 'memorized'
+      ? baseNames.filter((item) => bookmarks.memorized.includes(item.id))
+      : baseNames;
 
-  // If filtered view is empty, insert dummy card to trigger safe exit
+  // Handle dummy card if filtered view is empty
   const isDummy = activeCategory && displayedNames.length === 0;
   if (isDummy) {
     displayedNames = [
@@ -96,6 +127,21 @@ export default function HomeScreen({
 
   return (
     <View style={{ flex: 1 }}>
+      {/* Alphabetical toggle (bottom-right floating) */}
+      <TouchableOpacity
+        onPress={handleToggleAlphabetical}
+        style={{
+          position: 'absolute',
+          bottom: 100, // sits above DotIndicator
+          right: 20,
+          zIndex: 10,
+        }}
+        hitSlop={10}
+      >
+        <AZIcon isShuffled={isShuffled} size={48} />
+      </TouchableOpacity>
+
+      {/* Card FlatList */}
       <FlatList
         ref={flatListRef}
         data={displayedNames}
@@ -114,9 +160,9 @@ export default function HomeScreen({
           index,
         })}
         keyExtractor={(item) => item.id.toString()}
-        extraData={{ bookmarks, activeCategory }}
+        extraData={{ bookmarks, activeCategory, isShuffled }}
         renderItem={({ item }) => {
-          // Detect dummy card → exit filter on next tick
+          // Detect dummy card → exit filter
           if (item.id === 'dummy') {
             setTimeout(() => {
               setActiveCategory(null);
@@ -149,6 +195,7 @@ export default function HomeScreen({
         }}
       />
 
+      {/* DotIndicator (center bottom) */}
       <View
         style={{
           position: 'absolute',
