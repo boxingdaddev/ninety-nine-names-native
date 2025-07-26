@@ -21,7 +21,7 @@ export default function App() {
   const bookmarks = { loved, studied, memorized };
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#f9f5e7' }}>
       <StatusBar barStyle="dark-content" />
       <HomeScreen
         names={namesData}
