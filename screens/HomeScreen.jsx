@@ -90,13 +90,15 @@ export default function HomeScreen({
   let baseNames = isShuffled ? shuffledNames : names;
 
   let displayedNames =
-    activeCategory === 'loved'
-      ? baseNames.filter((item) => bookmarks.loved.includes(item.id))
-      : activeCategory === 'studied'
+    // Removed loved filter branch (blue heart) for cleaner bookmark mode
+    // activeCategory === 'loved'
+    //   ? baseNames.filter((item) => bookmarks.loved.includes(item.id))
+    activeCategory === 'studied'
       ? baseNames.filter((item) => bookmarks.studied.includes(item.id))
       : activeCategory === 'memorized'
       ? baseNames.filter((item) => bookmarks.memorized.includes(item.id))
       : baseNames;
+
 
   const isDummy = activeCategory && displayedNames.length === 0;
   if (isDummy) {

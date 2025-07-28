@@ -150,10 +150,12 @@ export default function FlipCard({
 
             {/* Right blue icons */}
             <View style={styles.iconRowSummary}>
-              {counts.loved > 0 && renderBlueIcon('loved', 'heart')}
+              {/* Removed blue heart filter (Loved) for cleaner bookmark mode */}
+              {/* {counts.loved > 0 && renderBlueIcon('loved', 'heart')} */}
               {counts.studied > 0 && renderBlueIcon('studied', 'book-open')}
               {counts.memorized > 0 && renderBlueIcon('memorized', 'brain')}
             </View>
+
 
             <Text style={id === 20 ? styles.arabicLong : styles.arabic}>{name}</Text>
             <Text style={styles.translit}>{transliteration}</Text>
@@ -196,7 +198,8 @@ export default function FlipCard({
 
             {/* Right blue icons */}
             <View style={styles.iconRowSummary}>
-              {counts.loved > 0 && renderBlueIcon('loved', 'heart')}
+              {/* Removed blue heart filter (Loved) for cleaner bookmark mode */}
+              {/* {counts.loved > 0 && renderBlueIcon('loved', 'heart')} */}
               {counts.studied > 0 && renderBlueIcon('studied', 'book-open')}
               {counts.memorized > 0 && renderBlueIcon('memorized', 'brain')}
             </View>
