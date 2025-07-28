@@ -118,7 +118,7 @@ export default function FlipCard({
         <CardFlip style={styles.cardContainer} ref={cardRef}>
           {/* FRONT */}
           <View style={[styles.card, styles.front]}>
-            <MoonBadge number={id} />
+            <MoonBadge number={id} activeCategory={activeCategory} />
 
             {/* Left gold/grey icons */}
             <View style={styles.iconRowFront}>
