@@ -213,12 +213,13 @@ export default function FlipCard({
 const styles = StyleSheet.create({
   flipWrapper: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
     alignItems: 'center',
+    marginBottom: 250, // adjust this value to position card higher
   },
   cardContainer: {
     width: width * 0.85,
-    height: width * 1.1,
+    height: width * 1.25,
     alignSelf: 'center',
   },
   card: {

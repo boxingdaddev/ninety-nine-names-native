@@ -122,8 +122,8 @@ export default function HomeScreen({
         onPress={handleToggleAlphabetical}
         style={{
           position: 'absolute',
-          bottom: 140,
-          right: 65,
+          bottom: 160,
+          right: 70,
           zIndex: 10,
         }}
         hitSlop={10}
@@ -189,7 +189,7 @@ export default function HomeScreen({
         <View
           style={{
             position: 'absolute',
-            bottom: 70, // above DotIndicator
+            bottom: 85, // above DotIndicator
             width: '100%',
             alignItems: 'center',
           }}
@@ -204,7 +204,7 @@ export default function HomeScreen({
       <View
         style={{
           position: 'absolute',
-          bottom: 40,
+          bottom: 60,
           width: '100%',
           alignItems: 'center',
         }}
