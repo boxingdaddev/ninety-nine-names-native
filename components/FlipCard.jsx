@@ -46,13 +46,13 @@ export default function FlipCard({
       Animated.loop(
         Animated.sequence([
           Animated.timing(subtlePulseAnim, {
-            toValue: 0.85,
-            duration: 1500,
+            toValue: 0.92, // more noticeable pulse
+            duration: 3000, // slightly faster cycle
             useNativeDriver: true,
           }),
           Animated.timing(subtlePulseAnim, {
-            toValue: 1,
-            duration: 1500,
+            toValue: 1.03,
+            duration: 3000,
             useNativeDriver: true,
           }),
         ])
@@ -103,7 +103,7 @@ export default function FlipCard({
         <Animated.View
           style={{
             opacity: isIconActive ? subtlePulseAnim : 1,
-            transform: [{ scale: isIconActive ? 1.2 : 1 }],
+            transform: [{ scale: isIconActive ? subtlePulseAnim : 1 }],
           }}
         >
           <FontAwesome5 name={iconName} size={26} solid color={iconColor} />
