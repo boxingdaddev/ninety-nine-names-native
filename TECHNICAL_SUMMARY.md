@@ -93,7 +93,19 @@ project-root/
 
 ---
 
-## Next Steps
-- UI/UX polish (spacing, fonts, icon clarity).
-- Optional: add search/filter by name.
-- Optional: audio pronunciation support.
+### Pulse Timing / Shrink Adjustments
+
+- **Bookmark Icons (FlipCard.jsx)**
+  - Pulse between `0.92` and `1.03` scale
+  - Duration: 3000ms per cycle
+  - Adjust in `Animated.sequence` block
+
+- **Moon Badge (MoonBadge.jsx)**
+  - Same pulse logic; adjust shrink factor/duration similarly
+
+- **Folder Icon (HomeScreen.jsx)**
+  - Pulses between `#1E3A8A` and `#2952CC`
+  - Only pulses when `isOrganized && activeCategory === null`
+
+> **Tip:** Keep all pulsing at the same rhythm for visual harmony unless deliberate variation is needed (folder unique cycle).
+
