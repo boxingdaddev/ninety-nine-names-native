@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { View, FlatList, Dimensions, TouchableOpacity } from 'react-native';
+import { View, FlatList, Dimensions, TouchableOpacity, Text, StyleSheet } from 'react-native';
 import FlipCard from '../components/FlipCard';
 import DotIndicator from '../components/DotIndicator';
-import AZIcon from '../components/AZIcon'; // New icon component
-import shuffleNames from '../utils/shuffle-names'; // Correct import path
+import AZIcon from '../components/AZIcon';
+import shuffleNames from '../utils/shuffle-names';
 
 const { width } = Dimensions.get('window');
 
@@ -30,27 +30,21 @@ export default function HomeScreen({
   const [activeCategory, setActiveCategory] = useState(null);
   const [isScrolling, setIsScrolling] = useState(false);
   const [pendingUpdate, setPendingUpdate] = useState(false);
-
-  // Shuffle state (default: shuffled)
   const [isShuffled, setIsShuffled] = useState(true);
   const [shuffledNames, setShuffledNames] = useState([]);
 
   const flatListRef = useRef(null);
 
-  // Generate shuffled list on mount or when names change
   useEffect(() => {
     setShuffledNames(shuffleNames(names));
   }, [names]);
 
-  // Toggle shuffle/alpha
   const handleToggleAlphabetical = () => {
     if (isShuffled) {
-      // Switch to alphabetical (ID order)
       setIsShuffled(false);
       setCurrentIndex(0);
       flatListRef.current?.scrollToOffset({ offset: 0, animated: false });
     } else {
-      // Switch back to shuffle
       setShuffledNames(shuffleNames(names));
       setIsShuffled(true);
       setCurrentIndex(0);
@@ -58,7 +52,6 @@ export default function HomeScreen({
     }
   };
 
-  // Scroll handlers
   const handleScroll = (event) => {
     const index = Math.round(
       event.nativeEvent.contentOffset.x / event.nativeEvent.layoutMeasurement.width
@@ -67,6 +60,7 @@ export default function HomeScreen({
   };
 
   const handleMomentumScrollBegin = () => setIsScrolling(true);
+
   const handleMomentumScrollEnd = () => {
     setIsScrolling(false);
     if (pendingUpdate) {
@@ -75,14 +69,12 @@ export default function HomeScreen({
     }
   };
 
-  // Throttled category setter for blue icon filters
   const throttledSetActiveCategory = throttle((category) => {
     flatListRef.current?.scrollToOffset({ offset: 0, animated: false });
     setCurrentIndex(0);
     setActiveCategory(category);
   }, 200);
 
-  // Safe toggle wrapper for gold icons
   const safeToggle = (callback) => {
     if (isScrolling) {
       setPendingUpdate(true);
@@ -90,16 +82,13 @@ export default function HomeScreen({
     callback();
   };
 
-  // Throttled bookmark toggles (gold icons)
   const throttledToggleLove = (id) => safeToggle(() => throttle(toggleLove, 200)(id));
   const throttledToggleStudy = (id) => safeToggle(() => throttle(toggleStudy, 200)(id));
   const throttledToggleMemorized = (id) =>
     safeToggle(() => throttle(toggleMemorized, 200)(id));
 
-  // Determine base list: shuffled or alphabetical
   let baseNames = isShuffled ? shuffledNames : names;
 
-  // Apply bookmark filtering
   let displayedNames =
     activeCategory === 'loved'
       ? baseNames.filter((item) => bookmarks.loved.includes(item.id))
@@ -109,7 +98,6 @@ export default function HomeScreen({
       ? baseNames.filter((item) => bookmarks.memorized.includes(item.id))
       : baseNames;
 
-  // Handle dummy card if filtered view is empty
   const isDummy = activeCategory && displayedNames.length === 0;
   if (isDummy) {
     displayedNames = [
@@ -127,13 +115,13 @@ export default function HomeScreen({
 
   return (
     <View style={{ flex: 1 }}>
-      {/* Alphabetical toggle (bottom-right floating) */}
+      {/* A-Z Toggle (bottom-right) */}
       <TouchableOpacity
         onPress={handleToggleAlphabetical}
         style={{
           position: 'absolute',
-          bottom: 100, // sits above DotIndicator
-          right: 20,
+          bottom: 140,
+          right: 65,
           zIndex: 10,
         }}
         hitSlop={10}
@@ -141,7 +129,7 @@ export default function HomeScreen({
         <AZIcon isShuffled={isShuffled} size={48} />
       </TouchableOpacity>
 
-      {/* Card FlatList */}
+      {/* FlipCard List */}
       <FlatList
         ref={flatListRef}
         data={displayedNames}
@@ -162,7 +150,6 @@ export default function HomeScreen({
         keyExtractor={(item) => item.id.toString()}
         extraData={{ bookmarks, activeCategory, isShuffled }}
         renderItem={({ item }) => {
-          // Detect dummy card → exit filter
           if (item.id === 'dummy') {
             setTimeout(() => {
               setActiveCategory(null);
@@ -195,7 +182,23 @@ export default function HomeScreen({
         }}
       />
 
-      {/* DotIndicator (center bottom) */}
+      {/* Brain Counter (only memorized mode) */}
+      {activeCategory === 'memorized' && (
+        <View
+          style={{
+            position: 'absolute',
+            bottom: 70, // above DotIndicator
+            width: '100%',
+            alignItems: 'center',
+          }}
+        >
+          <Text style={styles.brainCounter}>
+            {bookmarks.memorized.length} of 99 Memorized
+          </Text>
+        </View>
+      )}
+
+      {/* Dot Indicator (unchanged logic) */}
       <View
         style={{
           position: 'absolute',
@@ -204,8 +207,23 @@ export default function HomeScreen({
           alignItems: 'center',
         }}
       >
-        <DotIndicator total={displayedNames.length} currentIndex={currentIndex} />
+        <DotIndicator
+          total={displayedNames.length}
+          currentIndex={currentIndex}
+        />
       </View>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  brainCounter: {
+    fontSize: 18,
+    fontWeight: '600',
+    color: '#D4AF37',
+    marginBottom: 4,
+    textShadowColor: 'rgba(0,0,0,0.1)',
+    textShadowOffset: { width: 0, height: 1 },
+    textShadowRadius: 1,
+  },
+});
