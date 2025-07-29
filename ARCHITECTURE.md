@@ -5,6 +5,8 @@ This React Native (Expo) app displays the 99 Names of Allah as interactive flash
 
 The app is designed to be modular and scalable, with separate folders for components, screens, hooks, utilities, and assets.
 
+Counter and organize mode, to see how many card you have studied, how many you have committed to memory, and how many names remain waiting to be learned.
+
 ---
 
 ## Folder Structure
