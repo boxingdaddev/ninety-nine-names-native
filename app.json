@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "ninety-nine-names-native",
-    "slug": "ninety-nine-names-native",
+    "name": "Flipping99",
+    "slug": "flipping99",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -16,6 +16,8 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.flipping99.app",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#f9f5e7"
