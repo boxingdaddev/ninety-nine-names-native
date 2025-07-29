@@ -107,3 +107,26 @@ For deeper architecture and roadmap, see [ARCHITECTURE.md](ARCHITECTURE.md).
 This project is licensed under the [MIT License](LICENSE).
 
 Copyright (c) 2025 Adam Makhyoun
+---
+
+## Versioning & Workflow
+
+This project uses **semantic versioning** with a simple branching strategy:
+
+- **Current branch:** `master` (active development and tagging)
+- **Release tags:** `v1.0.0`, `v1.1.0`, etc.
+- **Future workflow:** After `v1.1.0`, ongoing work will move to a `develop` branch:
+  - `master` will hold only stable releases (tagged)
+  - `develop` will contain active development, merged into `master` on release
+
+### Tagging a new release
+```bash
+git tag v1.1.0
+git push origin master --tags
+```
+
+### Starting a `develop` branch (post-`v1.1.0`)
+```bash
+git checkout -b develop
+git push origin develop
+```
