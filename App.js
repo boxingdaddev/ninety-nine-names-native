@@ -4,8 +4,24 @@ import namesData from './assets/data/99names.json';
 import HomeScreen from './screens/HomeScreen';
 import useBookmarks from './components/hooks/useBookmarks';
 
+// Font import
+import { useFonts, Poppins_600SemiBold } from '@expo-google-fonts/poppins';
+
 export default function App() {
-  // Initialize bookmark hook
+  // Load fonts FIRST and block render until loaded
+  const [fontsLoaded] = useFonts({
+    Poppins_600SemiBold,
+  });
+
+  if (!fontsLoaded) {
+    return null; // Could add splash screen here later
+  }
+
+  return <AppContent />;
+}
+
+function AppContent() {
+  // Now safe to call useBookmarks AFTER fonts are loaded
   const {
     loved,
     studied,
@@ -14,10 +30,9 @@ export default function App() {
     toggleStudy,
     toggleMemorized,
     getCounts,
-    getFilteredData
+    getFilteredData,
   } = useBookmarks();
 
-  // Prepare bookmarks object for HomeScreen
   const bookmarks = { loved, studied, memorized };
 
   return (
