@@ -290,7 +290,7 @@ export default function HomeScreen({
           }}
         >
           <Text style={styles.brainCounter}>
-            {currentIndex + 1} of {bookmarks.studied.length} Studied
+            Studying {currentIndex + 1} of {bookmarks.studied.length}
           </Text>
         </View>
       )}
