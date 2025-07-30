@@ -43,7 +43,7 @@ export default function HomeScreen({
   // Folder pulse animation (blue shades)
   const folderPulseAnim = useRef(new Animated.Value(0)).current;
 
-  // Animate only when organized AND in main deck
+  // Animate folder pulse when organized AND main deck active
   useEffect(() => {
     if (isOrganized && activeCategory === null) {
       Animated.loop(
@@ -73,6 +73,7 @@ export default function HomeScreen({
 
   const flatListRef = useRef(null);
 
+  // Initialize shuffled names
   useEffect(() => {
     setShuffledNames(shuffleNames(names));
   }, [names]);
@@ -148,20 +149,24 @@ export default function HomeScreen({
       ? baseNames.filter((item) => bookmarks.memorized.includes(item.id))
       : filteredBaseNames;
 
-  const isDummy = activeCategory && displayedNames.length === 0;
-  if (isDummy) {
-    displayedNames = [
-      {
-        id: 'dummy',
-        name: '',
-        transliteration: '',
-        title: '',
-        description: '',
-        verse: '',
-        reference: '',
-      },
-    ];
-  }
+  // Auto-return to main deck if category becomes empty
+  useEffect(() => {
+    if (activeCategory && displayedNames.length === 0) {
+      setActiveCategory(null);
+      setCurrentIndex(0);
+      flatListRef.current?.scrollToOffset({ offset: 0, animated: false });
+    }
+  }, [activeCategory, displayedNames.length]);
+
+  // Clamp currentIndex whenever deck length changes
+  useEffect(() => {
+    if (currentIndex >= displayedNames.length) {
+      setCurrentIndex(displayedNames.length > 0 ? displayedNames.length - 1 : 0);
+    }
+  }, [displayedNames.length, activeCategory]);
+
+  // Safe value for display (prevents "4 of 3")
+  const safeIndex = Math.min(currentIndex + 1, displayedNames.length);
 
   return (
     <View style={{ flex: 1 }}>
@@ -230,37 +235,26 @@ export default function HomeScreen({
         })}
         keyExtractor={(item) => item.id.toString()}
         extraData={{ bookmarks, activeCategory, isShuffled, isOrganized }}
-        renderItem={({ item }) => {
-          if (item.id === 'dummy') {
-            setTimeout(() => {
-              setActiveCategory(null);
-              setCurrentIndex(0);
-              flatListRef.current?.scrollToOffset({ offset: 0, animated: false });
-            }, 0);
-            return <View style={{ width }} />;
-          }
-
-          return (
-            <View style={{ width, alignItems: 'center' }}>
-              <FlipCard
-                {...item}
-                isLoved={bookmarks.loved.includes(item.id)}
-                toggleLoveBookmark={() => throttledToggleLove(item.id)}
-                isStudied={bookmarks.studied.includes(item.id)}
-                toggleStudyBookmark={() => throttledToggleStudy(item.id)}
-                isMemorized={bookmarks.memorized.includes(item.id)}
-                toggleMemorized={() => throttledToggleMemorized(item.id)}
-                counts={{
-                  loved: bookmarks.loved.length,
-                  studied: bookmarks.studied.length,
-                  memorized: bookmarks.memorized.length,
-                }}
-                activeCategory={activeCategory}
-                setActiveCategory={throttledSetActiveCategory}
-              />
-            </View>
-          );
-        }}
+        renderItem={({ item }) => (
+          <View style={{ width, alignItems: 'center' }}>
+            <FlipCard
+              {...item}
+              isLoved={bookmarks.loved.includes(item.id)}
+              toggleLoveBookmark={() => throttledToggleLove(item.id)}
+              isStudied={bookmarks.studied.includes(item.id)}
+              toggleStudyBookmark={() => throttledToggleStudy(item.id)}
+              isMemorized={bookmarks.memorized.includes(item.id)}
+              toggleMemorized={() => throttledToggleMemorized(item.id)}
+              counts={{
+                loved: bookmarks.loved.length,
+                studied: bookmarks.studied.length,
+                memorized: bookmarks.memorized.length,
+              }}
+              activeCategory={activeCategory}
+              setActiveCategory={throttledSetActiveCategory}
+            />
+          </View>
+        )}
       />
 
       {/* Main deck counter (activeCategory null) */}
@@ -274,7 +268,7 @@ export default function HomeScreen({
           }}
         >
           <Text style={styles.brainCounter}>
-            {currentIndex + 1} of {displayedNames.length}
+            {safeIndex} of {displayedNames.length}
           </Text>
         </View>
       )}
@@ -290,7 +284,7 @@ export default function HomeScreen({
           }}
         >
           <Text style={styles.brainCounter}>
-            Studying {currentIndex + 1} of {bookmarks.studied.length}
+            Studying {safeIndex} of {bookmarks.studied.length}
           </Text>
         </View>
       )}
